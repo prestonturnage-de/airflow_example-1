@@ -14,7 +14,7 @@ from airflow.decorators import dag, task
 
 
 @task.virtualenv(requirements=['requests'])
-def getpokemons(limit=1):
+def get_pokemons(limit=1):
 	'''
 	Hits the pokemon api for a list of pokemon, organized in 20-mon chunks
 
@@ -48,7 +48,7 @@ def getpokemons(limit=1):
 
 
 @task.virtualenv(requirements=['requests'])
-def getpokemonweights(mons):
+def get_pokemon_weights(mons):
 	'''
 	Adds a weight field to the list of pokemon dicts obtained in the previous step.
 
@@ -85,7 +85,7 @@ def getpokemonweights(mons):
 
 
 @task.virtualenv(requirements=['scikit-learn', 'numpy'])
-def clusterpokemonweights(mons):
+def cluster_pokemon_weights(mons):
 	'''
 	Uses the clustering function from scikit-learn to sort the weight information
 	into bins.
@@ -151,7 +151,7 @@ def clusterpokemonweights(mons):
 
 
 @task.virtualenv
-def metricspokemonweights(mons):
+def metrics_pokemon_weights(mons):
 	'''
 	Calculate the metrics and print the results of the previous functions.
 
@@ -212,24 +212,24 @@ def metricspokemonweights(mons):
 
 
 @dag(
-		dag_id='',
+		dag_id='clustering_deidentification',
 		schedule=None,
 		catchup=False,
 		tags=["example"],
 )
-def pokemon_example():
+def mainfunc():
 	'''
 	Define the DAG
 	'''
 	# get the list of pokemon names and urls for querying their details.
-	mons = getpokemons(100)
+	mons = get_pokemons(100)
 	# Hit the endpoints from the previous result to get their weights.
-	monsdetail = getpokemonweights(mons)
+	monsdetail = get_pokemon_weights(mons)
 	# Perform clustering. We could use a much simpler algorithm for this but this is mostly
 	# for demonstration purposes. 
-	monsclustered = clusterpokemonweights(monsdetail)
+	monsclustered = cluster_pokemon_weights(monsdetail)
 	# compute the metrics and print the results.
-	metricspokemonweights(monsclustered)
+	metrics_pokemon_weights(monsclustered)
 
 # You have to call the DAG function in order to register it with airflow. Let's do that here.
-pokemon_example()
+mainfunc()
