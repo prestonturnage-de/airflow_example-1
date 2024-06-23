@@ -1,0 +1,53 @@
+[2024-06-23T00:02:00.979+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-23T00:02:01.001+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pokemon_example.clusterpokemonweights manual__2024-06-23T00:01:34.566508+00:00 [queued]>
+[2024-06-23T00:02:01.009+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pokemon_example.clusterpokemonweights manual__2024-06-23T00:01:34.566508+00:00 [queued]>
+[2024-06-23T00:02:01.009+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-06-23T00:02:01.021+0000] {taskinstance.py:2330} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): clusterpokemonweights> on 2024-06-23 00:01:34.566508+00:00
+[2024-06-23T00:02:01.028+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=5436) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-06-23T00:02:01.029+0000] {standard_task_runner.py:63} INFO - Started process 5437 to run task
+[2024-06-23T00:02:01.029+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'pokemon_example', 'clusterpokemonweights', 'manual__2024-06-23T00:01:34.566508+00:00', '--job-id', '72', '--raw', '--subdir', 'DAGS_FOLDER/python_operators.py', '--cfg-path', '/tmp/tmpla324l5p']
+[2024-06-23T00:02:01.030+0000] {standard_task_runner.py:91} INFO - Job 72: Subtask clusterpokemonweights
+[2024-06-23T00:02:01.091+0000] {task_command.py:426} INFO - Running <TaskInstance: pokemon_example.clusterpokemonweights manual__2024-06-23T00:01:34.566508+00:00 [running]> on host c357804a93ab
+[2024-06-23T00:02:01.182+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pokemon_example' AIRFLOW_CTX_TASK_ID='clusterpokemonweights' AIRFLOW_CTX_EXECUTION_DATE='2024-06-23T00:01:34.566508+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-23T00:01:34.566508+00:00'
+[2024-06-23T00:02:01.183+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-23T00:02:01.184+0000] {process_utils.py:183} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venvyh_h9d0c --system-site-packages --python=python
+[2024-06-23T00:02:01.185+0000] {process_utils.py:187} INFO - Output:
+[2024-06-23T00:02:01.918+0000] {process_utils.py:191} INFO - created virtual environment CPython3.12.3.final.0-64 in 241ms
+[2024-06-23T00:02:01.918+0000] {process_utils.py:191} INFO -   creator CPython3Posix(dest=/tmp/venvyh_h9d0c, clear=False, no_vcs_ignore=False, global=True)
+[2024-06-23T00:02:01.919+0000] {process_utils.py:191} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-06-23T00:02:01.919+0000] {process_utils.py:191} INFO -     added seed packages: pip==24.0
+[2024-06-23T00:02:01.919+0000] {process_utils.py:191} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-06-23T00:02:01.940+0000] {process_utils.py:183} INFO - Executing cmd: /tmp/venvyh_h9d0c/bin/pip install -r /tmp/venvyh_h9d0c/requirements.txt
+[2024-06-23T00:02:01.940+0000] {process_utils.py:187} INFO - Output:
+[2024-06-23T00:02:04.031+0000] {process_utils.py:191} INFO - Requirement already satisfied: numpy in /home/***/.local/lib/python3.12/site-packages (from -r /tmp/venvyh_h9d0c/requirements.txt (line 1)) (1.26.4)
+[2024-06-23T00:02:04.485+0000] {process_utils.py:191} INFO - Collecting scikit-learn (from -r /tmp/venvyh_h9d0c/requirements.txt (line 2))
+[2024-06-23T00:02:04.632+0000] {process_utils.py:191} INFO -   Downloading scikit_learn-1.5.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+[2024-06-23T00:02:05.016+0000] {process_utils.py:191} INFO - Collecting scipy>=1.6.0 (from scikit-learn->-r /tmp/venvyh_h9d0c/requirements.txt (line 2))
+[2024-06-23T00:02:05.041+0000] {process_utils.py:191} INFO -   Downloading scipy-1.13.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2024-06-23T00:02:05.092+0000] {process_utils.py:191} INFO -      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.6/60.6 kB 1.2 MB/s eta 0:00:00
+[2024-06-23T00:02:05.185+0000] {process_utils.py:191} INFO - Collecting joblib>=1.2.0 (from scikit-learn->-r /tmp/venvyh_h9d0c/requirements.txt (line 2))
+[2024-06-23T00:02:05.206+0000] {process_utils.py:191} INFO -   Downloading joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+[2024-06-23T00:02:05.276+0000] {process_utils.py:191} INFO - Collecting threadpoolctl>=3.1.0 (from scikit-learn->-r /tmp/venvyh_h9d0c/requirements.txt (line 2))
+[2024-06-23T00:02:05.300+0000] {process_utils.py:191} INFO -   Downloading threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+[2024-06-23T00:02:05.387+0000] {process_utils.py:191} INFO - Downloading scikit_learn-1.5.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.1 MB)
+[2024-06-23T00:02:05.778+0000] {process_utils.py:191} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.1/13.1 MB 38.6 MB/s eta 0:00:00
+[2024-06-23T00:02:05.800+0000] {process_utils.py:191} INFO - Downloading joblib-1.4.2-py3-none-any.whl (301 kB)
+[2024-06-23T00:02:05.829+0000] {process_utils.py:191} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 301.8/301.8 kB 12.0 MB/s eta 0:00:00
+[2024-06-23T00:02:05.851+0000] {process_utils.py:191} INFO - Downloading scipy-1.13.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (38.2 MB)
+[2024-06-23T00:02:06.648+0000] {process_utils.py:191} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 38.2/38.2 MB 39.8 MB/s eta 0:00:00
+[2024-06-23T00:02:06.677+0000] {process_utils.py:191} INFO - Downloading threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+[2024-06-23T00:02:09.723+0000] {process_utils.py:191} INFO - Installing collected packages: threadpoolctl, scipy, joblib, scikit-learn
+[2024-06-23T00:02:17.173+0000] {process_utils.py:191} INFO - Successfully installed joblib-1.4.2 scikit-learn-1.5.0 scipy-1.13.1 threadpoolctl-3.5.0
+[2024-06-23T00:02:17.464+0000] {process_utils.py:191} INFO - 
+[2024-06-23T00:02:17.464+0000] {process_utils.py:191} INFO - [notice] A new release of pip is available: 24.0 -> 24.1
+[2024-06-23T00:02:17.465+0000] {process_utils.py:191} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2024-06-23T00:02:17.604+0000] {process_utils.py:183} INFO - Executing cmd: /tmp/venvyh_h9d0c/bin/python /tmp/venv-callqyey2t2_/script.py /tmp/venv-callqyey2t2_/script.in /tmp/venv-callqyey2t2_/script.out /tmp/venv-callqyey2t2_/string_args.txt /tmp/venv-callqyey2t2_/termination.log
+[2024-06-23T00:02:17.604+0000] {process_utils.py:187} INFO - Output:
+[2024-06-23T00:02:21.004+0000] {python.py:237} INFO - Done. Returned value was: {'clusterdata': {'n_clusters': 3, 'centroids': [88.50000000000006, 919.9999999999999, 307.0]}, 'pokemondata': [{'name': 'bulbasaur', 'url': 'https://pokeapi.co/api/v2/pokemon/1/', 'weight': 69, 'parent_cluster': 0, 'parent_centroid': 88.50000000000006}, {'name': 'ivysaur', 'url': 'https://pokeapi.co/api/v2/pokemon/2/', 'weight': 130, 'parent_cluster': 0, 'parent_centroid': 88.50000000000006}, {'name': 'venusaur', 'url': 'https://pokeapi.co/api/v2/pokemon/3/', 'weight': 1000, 'parent_cluster': 1, 'parent_centroid': 919.9999999999999}, {'name': 'charmander', 'url': 'https://pokeapi.co/api/v2/pokemon/4/', 'weight': 85, 'parent_cluster': 0, 'parent_centroid': 88.50000000000006}, {'name': 'charmeleon', 'url': 'https://pokeapi.co/api/v2/pokemon/5/', 'weight': 190, 'parent_cluster': 0, 'parent_centroid': 88.50000000000006}, {'name': 'charizard', 'url': 'https://pokeapi.co/api/v2/pokemon/6/', 'weight': 905, 'parent_cluster': 1, 'parent_centroid': 919.9999999999999}, {'name': 'squirtle', 'url': 'https://pokeapi.co/api/v2/pokemon/7/', 'weight': 90, 'parent_cluster': 0, 'parent_centroid': 88.50000000000006}, {'name': 'wartortle', 'url': 'https://pokeapi.co/api/v2/pokemon/8/', 'weight': 225, 'parent_cluster': 2, 'parent_centroid': 307.0}, {'name': 'blastoise', 'url': 'https://pokeapi.co/api/v2/pokemon/9/', 'weight': 855, 'parent_cluster': 1, 'parent_centroid': 919.9999999999999}, {'name': 'caterpie', 'url': 'https://pokeapi.co/api/v2/pokemon/10/', 'weight': 29, 'parent_cluster': 0, 'parent_centroid': 88.50000000000006}, {'name': 'metapod', 'url': 'https://pokeapi.co/api/v2/pokemon/11/', 'weight': 99, 'parent_cluster': 0, 'parent_centroid': 88.50000000000006}, {'name': 'butterfree', 'url': 'https://pokeapi.co/api/v2/pokemon/12/', 'weight': 320, 'parent_cluster': 2, 'parent_centroid': 307.0}, {'name': 'weedle', 'url': 'https://pokeapi.co/api/v2/pokemon/13/', 'weight': 32, 'parent_cluster': 0, 'parent_centroid': 88.50000000000006}, {'name': 'kakuna', 'url': 'https://pokeapi.co/api/v2/pokemon/14/', 'weight': 100, 'parent_cluster': 0, 'parent_centroid': 88.50000000000006}, {'name': 'beedrill', 'url': 'https://pokeapi.co/api/v2/pokemon/15/', 'weight': 295, 'parent_cluster': 2, 'parent_centroid': 307.0}, {'name': 'pidgey', 'url': 'https://pokeapi.co/api/v2/pokemon/16/', 'weight': 18, 'parent_cluster': 0, 'parent_centroid': 88.50000000000006}, {'name': 'pidgeotto', 'url': 'https://pokeapi.co/api/v2/pokemon/17/', 'weight': 300, 'parent_cluster': 2, 'parent_centroid': 307.0}, {'name': 'pidgeot', 'url': 'https://pokeapi.co/api/v2/pokemon/18/', 'weight': 395, 'parent_cluster': 2, 'parent_centroid': 307.0}, {'name': 'rattata', 'url': 'https://pokeapi.co/api/v2/pokemon/19/', 'weight': 35, 'parent_cluster': 0, 'parent_centroid': 88.50000000000006}, {'name': 'raticate', 'url': 'https://pokeapi.co/api/v2/pokemon/20/', 'weight': 185, 'parent_cluster': 0, 'parent_centroid': 88.50000000000006}]}
+[2024-06-23T00:02:21.006+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-23T00:02:21.032+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=pokemon_example, task_id=clusterpokemonweights, run_id=manual__2024-06-23T00:01:34.566508+00:00, execution_date=20240623T000134, start_date=20240623T000201, end_date=20240623T000221
+[2024-06-23T00:02:21.055+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-23T00:02:21.075+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-23T00:02:21.078+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

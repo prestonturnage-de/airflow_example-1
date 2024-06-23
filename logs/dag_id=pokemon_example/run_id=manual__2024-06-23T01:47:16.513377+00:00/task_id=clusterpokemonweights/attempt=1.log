@@ -1,0 +1,91 @@
+[2024-06-23T01:47:42.182+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-23T01:47:42.206+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pokemon_example.clusterpokemonweights manual__2024-06-23T01:47:16.513377+00:00 [queued]>
+[2024-06-23T01:47:42.214+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pokemon_example.clusterpokemonweights manual__2024-06-23T01:47:16.513377+00:00 [queued]>
+[2024-06-23T01:47:42.215+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-06-23T01:47:42.228+0000] {taskinstance.py:2330} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): clusterpokemonweights> on 2024-06-23 01:47:16.513377+00:00
+[2024-06-23T01:47:42.234+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=7698) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-06-23T01:47:42.235+0000] {standard_task_runner.py:63} INFO - Started process 7699 to run task
+[2024-06-23T01:47:42.236+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'pokemon_example', 'clusterpokemonweights', 'manual__2024-06-23T01:47:16.513377+00:00', '--job-id', '100', '--raw', '--subdir', 'DAGS_FOLDER/python_operators.py', '--cfg-path', '/tmp/tmpse8da8g2']
+[2024-06-23T01:47:42.237+0000] {standard_task_runner.py:91} INFO - Job 100: Subtask clusterpokemonweights
+[2024-06-23T01:47:42.278+0000] {task_command.py:426} INFO - Running <TaskInstance: pokemon_example.clusterpokemonweights manual__2024-06-23T01:47:16.513377+00:00 [running]> on host c357804a93ab
+[2024-06-23T01:47:42.380+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pokemon_example' AIRFLOW_CTX_TASK_ID='clusterpokemonweights' AIRFLOW_CTX_EXECUTION_DATE='2024-06-23T01:47:16.513377+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-23T01:47:16.513377+00:00'
+[2024-06-23T01:47:42.380+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-23T01:47:42.381+0000] {process_utils.py:183} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venvqlc0s2xz --system-site-packages --python=python
+[2024-06-23T01:47:42.382+0000] {process_utils.py:187} INFO - Output:
+[2024-06-23T01:47:43.123+0000] {process_utils.py:191} INFO - created virtual environment CPython3.12.3.final.0-64 in 243ms
+[2024-06-23T01:47:43.124+0000] {process_utils.py:191} INFO -   creator CPython3Posix(dest=/tmp/venvqlc0s2xz, clear=False, no_vcs_ignore=False, global=True)
+[2024-06-23T01:47:43.125+0000] {process_utils.py:191} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-06-23T01:47:43.125+0000] {process_utils.py:191} INFO -     added seed packages: pip==24.0
+[2024-06-23T01:47:43.125+0000] {process_utils.py:191} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-06-23T01:47:43.153+0000] {process_utils.py:183} INFO - Executing cmd: /tmp/venvqlc0s2xz/bin/pip install -r /tmp/venvqlc0s2xz/requirements.txt
+[2024-06-23T01:47:43.154+0000] {process_utils.py:187} INFO - Output:
+[2024-06-23T01:47:45.195+0000] {process_utils.py:191} INFO - Requirement already satisfied: numpy in /home/***/.local/lib/python3.12/site-packages (from -r /tmp/venvqlc0s2xz/requirements.txt (line 1)) (1.26.4)
+[2024-06-23T01:47:45.462+0000] {process_utils.py:191} INFO - Collecting scikit-learn (from -r /tmp/venvqlc0s2xz/requirements.txt (line 2))
+[2024-06-23T01:47:45.464+0000] {process_utils.py:191} INFO -   Using cached scikit_learn-1.5.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+[2024-06-23T01:47:45.741+0000] {process_utils.py:191} INFO - Collecting scipy>=1.6.0 (from scikit-learn->-r /tmp/venvqlc0s2xz/requirements.txt (line 2))
+[2024-06-23T01:47:45.742+0000] {process_utils.py:191} INFO -   Using cached scipy-1.13.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2024-06-23T01:47:45.837+0000] {process_utils.py:191} INFO - Collecting joblib>=1.2.0 (from scikit-learn->-r /tmp/venvqlc0s2xz/requirements.txt (line 2))
+[2024-06-23T01:47:45.838+0000] {process_utils.py:191} INFO -   Using cached joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+[2024-06-23T01:47:45.899+0000] {process_utils.py:191} INFO - Collecting threadpoolctl>=3.1.0 (from scikit-learn->-r /tmp/venvqlc0s2xz/requirements.txt (line 2))
+[2024-06-23T01:47:45.900+0000] {process_utils.py:191} INFO -   Using cached threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+[2024-06-23T01:47:45.939+0000] {process_utils.py:191} INFO - Using cached scikit_learn-1.5.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.1 MB)
+[2024-06-23T01:47:45.968+0000] {process_utils.py:191} INFO - Using cached joblib-1.4.2-py3-none-any.whl (301 kB)
+[2024-06-23T01:47:45.970+0000] {process_utils.py:191} INFO - Using cached scipy-1.13.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (38.2 MB)
+[2024-06-23T01:47:46.047+0000] {process_utils.py:191} INFO - Using cached threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+[2024-06-23T01:47:48.961+0000] {process_utils.py:191} INFO - Installing collected packages: threadpoolctl, scipy, joblib, scikit-learn
+[2024-06-23T01:47:55.574+0000] {process_utils.py:191} INFO - Successfully installed joblib-1.4.2 scikit-learn-1.5.0 scipy-1.13.1 threadpoolctl-3.5.0
+[2024-06-23T01:47:55.856+0000] {process_utils.py:191} INFO - 
+[2024-06-23T01:47:55.857+0000] {process_utils.py:191} INFO - [notice] A new release of pip is available: 24.0 -> 24.1
+[2024-06-23T01:47:55.857+0000] {process_utils.py:191} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2024-06-23T01:47:56.000+0000] {process_utils.py:183} INFO - Executing cmd: /tmp/venvqlc0s2xz/bin/python /tmp/venv-call9928qo8y/script.py /tmp/venv-call9928qo8y/script.in /tmp/venv-call9928qo8y/script.out /tmp/venv-call9928qo8y/string_args.txt /tmp/venv-call9928qo8y/termination.log
+[2024-06-23T01:47:56.001+0000] {process_utils.py:187} INFO - Output:
+[2024-06-23T01:47:58.709+0000] {process_utils.py:191} INFO - Traceback (most recent call last):
+[2024-06-23T01:47:58.709+0000] {process_utils.py:191} INFO -   File "/tmp/venv-call9928qo8y/script.py", line 102, in <module>
+[2024-06-23T01:47:58.709+0000] {process_utils.py:191} INFO -     res = clusterpokemonweights(*arg_dict["args"], **arg_dict["kwargs"])
+[2024-06-23T01:47:58.710+0000] {process_utils.py:191} INFO -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-06-23T01:47:58.710+0000] {process_utils.py:191} INFO -   File "/tmp/venv-call9928qo8y/script.py", line 70, in clusterpokemonweights
+[2024-06-23T01:47:58.710+0000] {process_utils.py:191} INFO -     'centroids': {list(i)[0]: histogram[list(i)[0]] for i in kmeans.cluster_centers_.reshape(-1, 1)}
+[2024-06-23T01:47:58.711+0000] {process_utils.py:191} INFO -                               ~~~~~~~~~^^^^^^^^^^^^
+[2024-06-23T01:47:58.711+0000] {process_utils.py:191} INFO - KeyError: 88.50000000000006
+[2024-06-23T01:47:59.169+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-23T01:47:59.178+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 265, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 437, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 759, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 514, in _execute_python_callable_in_subprocess
+    raise AirflowException(error_msg) from None
+airflow.exceptions.AirflowException: Process returned non-zero exit status 1.
+88.50000000000006
+[2024-06-23T01:47:59.181+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=pokemon_example, task_id=clusterpokemonweights, run_id=manual__2024-06-23T01:47:16.513377+00:00, execution_date=20240623T014716, start_date=20240623T014742, end_date=20240623T014759
+[2024-06-23T01:47:59.204+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 100 for task clusterpokemonweights (Process returned non-zero exit status 1.
+88.50000000000006; 7699)
+[2024-06-23T01:47:59.251+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-06-23T01:47:59.293+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-23T01:47:59.298+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

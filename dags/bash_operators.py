@@ -6,7 +6,7 @@ from airflow.operators.bash import BashOperator
 
 # Build an Airflow DAG
 with DAG(
-  dag_id="simple_operators", # The name that shows up in the UI
+  dag_id="simple_bash_operators", # The name that shows up in the UI
   start_date=pendulum.today(), # Start date of the DAG
   catchup=False,
 ) as dag:

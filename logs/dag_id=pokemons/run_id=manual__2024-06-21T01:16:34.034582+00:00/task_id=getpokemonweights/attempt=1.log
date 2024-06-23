@@ -1,0 +1,59 @@
+[2024-06-21T01:16:44.496+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-21T01:16:44.517+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pokemons.getpokemonweights manual__2024-06-21T01:16:34.034582+00:00 [queued]>
+[2024-06-21T01:16:44.528+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pokemons.getpokemonweights manual__2024-06-21T01:16:34.034582+00:00 [queued]>
+[2024-06-21T01:16:44.528+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-06-21T01:16:44.541+0000] {taskinstance.py:2330} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): getpokemonweights> on 2024-06-21 01:16:34.034582+00:00
+[2024-06-21T01:16:44.547+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=183) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-06-21T01:16:44.548+0000] {standard_task_runner.py:63} INFO - Started process 184 to run task
+[2024-06-21T01:16:44.548+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'pokemons', 'getpokemonweights', 'manual__2024-06-21T01:16:34.034582+00:00', '--job-id', '63', '--raw', '--subdir', 'DAGS_FOLDER/python_operators.py', '--cfg-path', '/tmp/tmp96ekm883']
+[2024-06-21T01:16:44.549+0000] {standard_task_runner.py:91} INFO - Job 63: Subtask getpokemonweights
+[2024-06-21T01:16:44.623+0000] {task_command.py:426} INFO - Running <TaskInstance: pokemons.getpokemonweights manual__2024-06-21T01:16:34.034582+00:00 [running]> on host c357804a93ab
+[2024-06-21T01:16:44.714+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pokemons' AIRFLOW_CTX_TASK_ID='getpokemonweights' AIRFLOW_CTX_EXECUTION_DATE='2024-06-21T01:16:34.034582+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-21T01:16:34.034582+00:00'
+[2024-06-21T01:16:44.715+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-21T01:16:44.716+0000] {process_utils.py:183} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venv86ofbf0t --system-site-packages --python=python
+[2024-06-21T01:16:44.717+0000] {process_utils.py:187} INFO - Output:
+[2024-06-21T01:16:45.468+0000] {process_utils.py:191} INFO - created virtual environment CPython3.12.3.final.0-64 in 223ms
+[2024-06-21T01:16:45.469+0000] {process_utils.py:191} INFO -   creator CPython3Posix(dest=/tmp/venv86ofbf0t, clear=False, no_vcs_ignore=False, global=True)
+[2024-06-21T01:16:45.469+0000] {process_utils.py:191} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-06-21T01:16:45.470+0000] {process_utils.py:191} INFO -     added seed packages: pip==24.0
+[2024-06-21T01:16:45.470+0000] {process_utils.py:191} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-06-21T01:16:45.492+0000] {process_utils.py:183} INFO - Executing cmd: /tmp/venv86ofbf0t/bin/pip install -r /tmp/venv86ofbf0t/requirements.txt
+[2024-06-21T01:16:45.493+0000] {process_utils.py:187} INFO - Output:
+[2024-06-21T01:16:47.558+0000] {process_utils.py:191} INFO - Requirement already satisfied: requests in /home/***/.local/lib/python3.12/site-packages (from -r /tmp/venv86ofbf0t/requirements.txt (line 1)) (2.31.0)
+[2024-06-21T01:16:47.567+0000] {process_utils.py:191} INFO - Requirement already satisfied: charset-normalizer<4,>=2 in /home/***/.local/lib/python3.12/site-packages (from requests->-r /tmp/venv86ofbf0t/requirements.txt (line 1)) (3.3.2)
+[2024-06-21T01:16:47.568+0000] {process_utils.py:191} INFO - Requirement already satisfied: idna<4,>=2.5 in /home/***/.local/lib/python3.12/site-packages (from requests->-r /tmp/venv86ofbf0t/requirements.txt (line 1)) (3.7)
+[2024-06-21T01:16:47.570+0000] {process_utils.py:191} INFO - Requirement already satisfied: urllib3<3,>=1.21.1 in /home/***/.local/lib/python3.12/site-packages (from requests->-r /tmp/venv86ofbf0t/requirements.txt (line 1)) (2.2.1)
+[2024-06-21T01:16:47.571+0000] {process_utils.py:191} INFO - Requirement already satisfied: certifi>=2017.4.17 in /home/***/.local/lib/python3.12/site-packages (from requests->-r /tmp/venv86ofbf0t/requirements.txt (line 1)) (2024.2.2)
+[2024-06-21T01:16:50.580+0000] {process_utils.py:191} INFO - 
+[2024-06-21T01:16:50.581+0000] {process_utils.py:191} INFO - [notice] A new release of pip is available: 24.0 -> 24.1
+[2024-06-21T01:16:50.581+0000] {process_utils.py:191} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2024-06-21T01:16:50.692+0000] {process_utils.py:183} INFO - Executing cmd: /tmp/venv86ofbf0t/bin/python /tmp/venv-call8wn6q96f/script.py /tmp/venv-call8wn6q96f/script.in /tmp/venv-call8wn6q96f/script.out /tmp/venv-call8wn6q96f/string_args.txt /tmp/venv-call8wn6q96f/termination.log
+[2024-06-21T01:16:50.693+0000] {process_utils.py:187} INFO - Output:
+[2024-06-21T01:16:57.315+0000] {process_utils.py:191} INFO - getting: bulbasaur
+[2024-06-21T01:16:57.316+0000] {process_utils.py:191} INFO - getting: ivysaur
+[2024-06-21T01:16:57.318+0000] {process_utils.py:191} INFO - getting: venusaur
+[2024-06-21T01:16:57.319+0000] {process_utils.py:191} INFO - getting: charmander
+[2024-06-21T01:16:57.320+0000] {process_utils.py:191} INFO - getting: charmeleon
+[2024-06-21T01:16:57.321+0000] {process_utils.py:191} INFO - getting: charizard
+[2024-06-21T01:16:57.322+0000] {process_utils.py:191} INFO - getting: squirtle
+[2024-06-21T01:16:57.323+0000] {process_utils.py:191} INFO - getting: wartortle
+[2024-06-21T01:16:57.325+0000] {process_utils.py:191} INFO - getting: blastoise
+[2024-06-21T01:16:57.326+0000] {process_utils.py:191} INFO - getting: caterpie
+[2024-06-21T01:16:57.327+0000] {process_utils.py:191} INFO - getting: metapod
+[2024-06-21T01:16:57.328+0000] {process_utils.py:191} INFO - getting: butterfree
+[2024-06-21T01:16:57.328+0000] {process_utils.py:191} INFO - getting: weedle
+[2024-06-21T01:16:57.329+0000] {process_utils.py:191} INFO - getting: kakuna
+[2024-06-21T01:16:57.330+0000] {process_utils.py:191} INFO - getting: beedrill
+[2024-06-21T01:16:57.331+0000] {process_utils.py:191} INFO - getting: pidgey
+[2024-06-21T01:16:57.331+0000] {process_utils.py:191} INFO - getting: pidgeotto
+[2024-06-21T01:16:57.332+0000] {process_utils.py:191} INFO - getting: pidgeot
+[2024-06-21T01:16:57.332+0000] {process_utils.py:191} INFO - getting: rattata
+[2024-06-21T01:16:57.333+0000] {process_utils.py:191} INFO - getting: raticate
+[2024-06-21T01:16:57.602+0000] {python.py:237} INFO - Done. Returned value was: [{'name': 'bulbasaur', 'url': 'https://pokeapi.co/api/v2/pokemon/1/', 'weight': 69}, {'name': 'ivysaur', 'url': 'https://pokeapi.co/api/v2/pokemon/2/', 'weight': 130}, {'name': 'venusaur', 'url': 'https://pokeapi.co/api/v2/pokemon/3/', 'weight': 1000}, {'name': 'charmander', 'url': 'https://pokeapi.co/api/v2/pokemon/4/', 'weight': 85}, {'name': 'charmeleon', 'url': 'https://pokeapi.co/api/v2/pokemon/5/', 'weight': 190}, {'name': 'charizard', 'url': 'https://pokeapi.co/api/v2/pokemon/6/', 'weight': 905}, {'name': 'squirtle', 'url': 'https://pokeapi.co/api/v2/pokemon/7/', 'weight': 90}, {'name': 'wartortle', 'url': 'https://pokeapi.co/api/v2/pokemon/8/', 'weight': 225}, {'name': 'blastoise', 'url': 'https://pokeapi.co/api/v2/pokemon/9/', 'weight': 855}, {'name': 'caterpie', 'url': 'https://pokeapi.co/api/v2/pokemon/10/', 'weight': 29}, {'name': 'metapod', 'url': 'https://pokeapi.co/api/v2/pokemon/11/', 'weight': 99}, {'name': 'butterfree', 'url': 'https://pokeapi.co/api/v2/pokemon/12/', 'weight': 320}, {'name': 'weedle', 'url': 'https://pokeapi.co/api/v2/pokemon/13/', 'weight': 32}, {'name': 'kakuna', 'url': 'https://pokeapi.co/api/v2/pokemon/14/', 'weight': 100}, {'name': 'beedrill', 'url': 'https://pokeapi.co/api/v2/pokemon/15/', 'weight': 295}, {'name': 'pidgey', 'url': 'https://pokeapi.co/api/v2/pokemon/16/', 'weight': 18}, {'name': 'pidgeotto', 'url': 'https://pokeapi.co/api/v2/pokemon/17/', 'weight': 300}, {'name': 'pidgeot', 'url': 'https://pokeapi.co/api/v2/pokemon/18/', 'weight': 395}, {'name': 'rattata', 'url': 'https://pokeapi.co/api/v2/pokemon/19/', 'weight': 35}, {'name': 'raticate', 'url': 'https://pokeapi.co/api/v2/pokemon/20/', 'weight': 185}]
+[2024-06-21T01:16:57.603+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-21T01:16:57.634+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=pokemons, task_id=getpokemonweights, run_id=manual__2024-06-21T01:16:34.034582+00:00, execution_date=20240621T011634, start_date=20240621T011644, end_date=20240621T011657
+[2024-06-21T01:16:57.665+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-21T01:16:57.684+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-21T01:16:57.687+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

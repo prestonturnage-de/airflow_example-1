@@ -1,0 +1,501 @@
+[2024-06-23T01:19:57.553+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-23T01:19:57.576+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pokemon_example.metricspokemonweights manual__2024-06-23T01:18:25.665789+00:00 [queued]>
+[2024-06-23T01:19:57.583+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pokemon_example.metricspokemonweights manual__2024-06-23T01:18:25.665789+00:00 [queued]>
+[2024-06-23T01:19:57.583+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-06-23T01:19:57.596+0000] {taskinstance.py:2330} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): metricspokemonweights> on 2024-06-23 01:18:25.665789+00:00
+[2024-06-23T01:19:57.602+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=7255) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-06-23T01:19:57.603+0000] {standard_task_runner.py:63} INFO - Started process 7256 to run task
+[2024-06-23T01:19:57.603+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'pokemon_example', 'metricspokemonweights', 'manual__2024-06-23T01:18:25.665789+00:00', '--job-id', '97', '--raw', '--subdir', 'DAGS_FOLDER/python_operators.py', '--cfg-path', '/tmp/tmpfbj1e3ts']
+[2024-06-23T01:19:57.604+0000] {standard_task_runner.py:91} INFO - Job 97: Subtask metricspokemonweights
+[2024-06-23T01:19:57.641+0000] {task_command.py:426} INFO - Running <TaskInstance: pokemon_example.metricspokemonweights manual__2024-06-23T01:18:25.665789+00:00 [running]> on host c357804a93ab
+[2024-06-23T01:19:57.745+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pokemon_example' AIRFLOW_CTX_TASK_ID='metricspokemonweights' AIRFLOW_CTX_EXECUTION_DATE='2024-06-23T01:18:25.665789+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-23T01:18:25.665789+00:00'
+[2024-06-23T01:19:57.745+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-23T01:19:57.746+0000] {process_utils.py:183} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venv4qmstbwu --system-site-packages --python=python
+[2024-06-23T01:19:57.747+0000] {process_utils.py:187} INFO - Output:
+[2024-06-23T01:19:58.479+0000] {process_utils.py:191} INFO - created virtual environment CPython3.12.3.final.0-64 in 229ms
+[2024-06-23T01:19:58.480+0000] {process_utils.py:191} INFO -   creator CPython3Posix(dest=/tmp/venv4qmstbwu, clear=False, no_vcs_ignore=False, global=True)
+[2024-06-23T01:19:58.480+0000] {process_utils.py:191} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-06-23T01:19:58.481+0000] {process_utils.py:191} INFO -     added seed packages: pip==24.0
+[2024-06-23T01:19:58.481+0000] {process_utils.py:191} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-06-23T01:19:58.504+0000] {process_utils.py:183} INFO - Executing cmd: /tmp/venv4qmstbwu/bin/pip install -r /tmp/venv4qmstbwu/requirements.txt
+[2024-06-23T01:19:58.504+0000] {process_utils.py:187} INFO - Output:
+[2024-06-23T01:20:03.585+0000] {process_utils.py:191} INFO - 
+[2024-06-23T01:20:03.586+0000] {process_utils.py:191} INFO - [notice] A new release of pip is available: 24.0 -> 24.1
+[2024-06-23T01:20:03.586+0000] {process_utils.py:191} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2024-06-23T01:20:03.679+0000] {process_utils.py:183} INFO - Executing cmd: /tmp/venv4qmstbwu/bin/python /tmp/venv-call01tzh8tz/script.py /tmp/venv-call01tzh8tz/script.in /tmp/venv-call01tzh8tz/script.out /tmp/venv-call01tzh8tz/string_args.txt /tmp/venv-call01tzh8tz/termination.log
+[2024-06-23T01:20:03.679+0000] {process_utils.py:187} INFO - Output:
+[2024-06-23T01:20:05.811+0000] {process_utils.py:191} INFO - ----------------------------------------------------------------------------------------------------
+[2024-06-23T01:20:05.811+0000] {process_utils.py:191} INFO - raw data:
+[2024-06-23T01:20:05.812+0000] {process_utils.py:191} INFO - name        url                                       weight    parent_cluster    parent_centroid    deviation_factor
+[2024-06-23T01:20:05.812+0000] {process_utils.py:191} INFO - ----------  --------------------------------------  --------  ----------------  -----------------  ------------------
+[2024-06-23T01:20:05.813+0000] {process_utils.py:191} INFO - bulbasaur   https://pokeapi.co/api/v2/pokemon/1/          69                 1            199.601          0.654311
+[2024-06-23T01:20:05.813+0000] {process_utils.py:191} INFO - ivysaur     https://pokeapi.co/api/v2/pokemon/2/         130                 1            199.601          0.348702
+[2024-06-23T01:20:05.814+0000] {process_utils.py:191} INFO - venusaur    https://pokeapi.co/api/v2/pokemon/3/        1000                 0            839.234          0.191562
+[2024-06-23T01:20:05.814+0000] {process_utils.py:191} INFO - charmander  https://pokeapi.co/api/v2/pokemon/4/          85                 1            199.601          0.574151
+[2024-06-23T01:20:05.815+0000] {process_utils.py:191} INFO - charmeleon  https://pokeapi.co/api/v2/pokemon/5/         190                 1            199.601          0.0481026
+[2024-06-23T01:20:05.815+0000] {process_utils.py:191} INFO - charizard   https://pokeapi.co/api/v2/pokemon/6/         905                 0            839.234          0.0783638
+[2024-06-23T01:20:05.816+0000] {process_utils.py:191} INFO - squirtle    https://pokeapi.co/api/v2/pokemon/7/          90                 1            199.601          0.549101
+[2024-06-23T01:20:05.816+0000] {process_utils.py:191} INFO - wartortle   https://pokeapi.co/api/v2/pokemon/8/         225                 1            199.601          0.127247
+[2024-06-23T01:20:05.817+0000] {process_utils.py:191} INFO - blastoise   https://pokeapi.co/api/v2/pokemon/9/         855                 0            839.234          0.0187857
+[2024-06-23T01:20:05.817+0000] {process_utils.py:191} INFO - caterpie    https://pokeapi.co/api/v2/pokemon/10/         29                 1            199.601          0.85471
+[2024-06-23T01:20:05.818+0000] {process_utils.py:191} INFO - metapod     https://pokeapi.co/api/v2/pokemon/11/         99                 1            199.601          0.504011
+[2024-06-23T01:20:05.818+0000] {process_utils.py:191} INFO - butterfree  https://pokeapi.co/api/v2/pokemon/12/        320                 1            199.601          0.603196
+[2024-06-23T01:20:05.818+0000] {process_utils.py:191} INFO - weedle      https://pokeapi.co/api/v2/pokemon/13/         32                 1            199.601          0.83968
+[2024-06-23T01:20:05.819+0000] {process_utils.py:191} INFO - kakuna      https://pokeapi.co/api/v2/pokemon/14/        100                 1            199.601          0.499001
+[2024-06-23T01:20:05.819+0000] {process_utils.py:191} INFO - beedrill    https://pokeapi.co/api/v2/pokemon/15/        295                 1            199.601          0.477946
+[2024-06-23T01:20:05.820+0000] {process_utils.py:191} INFO - pidgey      https://pokeapi.co/api/v2/pokemon/16/         18                 1            199.601          0.90982
+[2024-06-23T01:20:05.820+0000] {process_utils.py:191} INFO - pidgeotto   https://pokeapi.co/api/v2/pokemon/17/        300                 1            199.601          0.502996
+[2024-06-23T01:20:05.821+0000] {process_utils.py:191} INFO - pidgeot     https://pokeapi.co/api/v2/pokemon/18/        395                 1            199.601          0.978945
+[2024-06-23T01:20:05.821+0000] {process_utils.py:191} INFO - rattata     https://pokeapi.co/api/v2/pokemon/19/         35                 1            199.601          0.82465
+[2024-06-23T01:20:05.822+0000] {process_utils.py:191} INFO - raticate    https://pokeapi.co/api/v2/pokemon/20/        185                 1            199.601          0.0731526
+[2024-06-23T01:20:05.822+0000] {process_utils.py:191} INFO - spearow     https://pokeapi.co/api/v2/pokemon/21/         20                 1            199.601          0.8998
+[2024-06-23T01:20:05.823+0000] {process_utils.py:191} INFO - fearow      https://pokeapi.co/api/v2/pokemon/22/        380                 1            199.601          0.903795
+[2024-06-23T01:20:05.823+0000] {process_utils.py:191} INFO - ekans       https://pokeapi.co/api/v2/pokemon/23/         69                 1            199.601          0.654311
+[2024-06-23T01:20:05.824+0000] {process_utils.py:191} INFO - arbok       https://pokeapi.co/api/v2/pokemon/24/        650                 0            839.234          0.225485
+[2024-06-23T01:20:05.824+0000] {process_utils.py:191} INFO - pikachu     https://pokeapi.co/api/v2/pokemon/25/         60                 1            199.601          0.699401
+[2024-06-23T01:20:05.825+0000] {process_utils.py:191} INFO - raichu      https://pokeapi.co/api/v2/pokemon/26/        300                 1            199.601          0.502996
+[2024-06-23T01:20:05.825+0000] {process_utils.py:191} INFO - sandshrew   https://pokeapi.co/api/v2/pokemon/27/        120                 1            199.601          0.398802
+[2024-06-23T01:20:05.826+0000] {process_utils.py:191} INFO - sandslash   https://pokeapi.co/api/v2/pokemon/28/        295                 1            199.601          0.477946
+[2024-06-23T01:20:05.826+0000] {process_utils.py:191} INFO - nidoran-f   https://pokeapi.co/api/v2/pokemon/29/         70                 1            199.601          0.649301
+[2024-06-23T01:20:05.827+0000] {process_utils.py:191} INFO - nidorina    https://pokeapi.co/api/v2/pokemon/30/        200                 1            199.601          0.00199722
+[2024-06-23T01:20:05.827+0000] {process_utils.py:191} INFO - nidoqueen   https://pokeapi.co/api/v2/pokemon/31/        600                 0            839.234          0.285063
+[2024-06-23T01:20:05.828+0000] {process_utils.py:191} INFO - nidoran-m   https://pokeapi.co/api/v2/pokemon/32/         90                 1            199.601          0.549101
+[2024-06-23T01:20:05.828+0000] {process_utils.py:191} INFO - nidorino    https://pokeapi.co/api/v2/pokemon/33/        195                 1            199.601          0.0230527
+[2024-06-23T01:20:05.829+0000] {process_utils.py:191} INFO - nidoking    https://pokeapi.co/api/v2/pokemon/34/        620                 0            839.234          0.261231
+[2024-06-23T01:20:05.829+0000] {process_utils.py:191} INFO - clefairy    https://pokeapi.co/api/v2/pokemon/35/         75                 1            199.601          0.624251
+[2024-06-23T01:20:05.829+0000] {process_utils.py:191} INFO - clefable    https://pokeapi.co/api/v2/pokemon/36/        400                 1            199.601          1.00399
+[2024-06-23T01:20:05.830+0000] {process_utils.py:191} INFO - vulpix      https://pokeapi.co/api/v2/pokemon/37/         99                 1            199.601          0.504011
+[2024-06-23T01:20:05.830+0000] {process_utils.py:191} INFO - ninetales   https://pokeapi.co/api/v2/pokemon/38/        199                 1            199.601          0.00301276
+[2024-06-23T01:20:05.831+0000] {process_utils.py:191} INFO - jigglypuff  https://pokeapi.co/api/v2/pokemon/39/         55                 1            199.601          0.724451
+[2024-06-23T01:20:05.831+0000] {process_utils.py:191} INFO - wigglytuff  https://pokeapi.co/api/v2/pokemon/40/        120                 1            199.601          0.398802
+[2024-06-23T01:20:05.832+0000] {process_utils.py:191} INFO - zubat       https://pokeapi.co/api/v2/pokemon/41/         75                 1            199.601          0.624251
+[2024-06-23T01:20:05.832+0000] {process_utils.py:191} INFO - golbat      https://pokeapi.co/api/v2/pokemon/42/        550                 0            839.234          0.344641
+[2024-06-23T01:20:05.833+0000] {process_utils.py:191} INFO - oddish      https://pokeapi.co/api/v2/pokemon/43/         54                 1            199.601          0.729461
+[2024-06-23T01:20:05.833+0000] {process_utils.py:191} INFO - gloom       https://pokeapi.co/api/v2/pokemon/44/         86                 1            199.601          0.569141
+[2024-06-23T01:20:05.834+0000] {process_utils.py:191} INFO - vileplume   https://pokeapi.co/api/v2/pokemon/45/        186                 1            199.601          0.0681426
+[2024-06-23T01:20:05.834+0000] {process_utils.py:191} INFO - paras       https://pokeapi.co/api/v2/pokemon/46/         54                 1            199.601          0.729461
+[2024-06-23T01:20:05.835+0000] {process_utils.py:191} INFO - parasect    https://pokeapi.co/api/v2/pokemon/47/        295                 1            199.601          0.477946
+[2024-06-23T01:20:05.835+0000] {process_utils.py:191} INFO - venonat     https://pokeapi.co/api/v2/pokemon/48/        300                 1            199.601          0.502996
+[2024-06-23T01:20:05.836+0000] {process_utils.py:191} INFO - venomoth    https://pokeapi.co/api/v2/pokemon/49/        125                 1            199.601          0.373752
+[2024-06-23T01:20:05.836+0000] {process_utils.py:191} INFO - diglett     https://pokeapi.co/api/v2/pokemon/50/          8                 1            199.601          0.95992
+[2024-06-23T01:20:05.837+0000] {process_utils.py:191} INFO - dugtrio     https://pokeapi.co/api/v2/pokemon/51/        333                 1            199.601          0.668325
+[2024-06-23T01:20:05.837+0000] {process_utils.py:191} INFO - meowth      https://pokeapi.co/api/v2/pokemon/52/         42                 1            199.601          0.789581
+[2024-06-23T01:20:05.838+0000] {process_utils.py:191} INFO - persian     https://pokeapi.co/api/v2/pokemon/53/        320                 1            199.601          0.603196
+[2024-06-23T01:20:05.838+0000] {process_utils.py:191} INFO - psyduck     https://pokeapi.co/api/v2/pokemon/54/        196                 1            199.601          0.0180427
+[2024-06-23T01:20:05.839+0000] {process_utils.py:191} INFO - golduck     https://pokeapi.co/api/v2/pokemon/55/        766                 0            839.234          0.0872633
+[2024-06-23T01:20:05.839+0000] {process_utils.py:191} INFO - mankey      https://pokeapi.co/api/v2/pokemon/56/        280                 1            199.601          0.402796
+[2024-06-23T01:20:05.839+0000] {process_utils.py:191} INFO - primeape    https://pokeapi.co/api/v2/pokemon/57/        320                 1            199.601          0.603196
+[2024-06-23T01:20:05.840+0000] {process_utils.py:191} INFO - growlithe   https://pokeapi.co/api/v2/pokemon/58/        190                 1            199.601          0.0481026
+[2024-06-23T01:20:05.840+0000] {process_utils.py:191} INFO - arcanine    https://pokeapi.co/api/v2/pokemon/59/       1550                 0            839.234          0.846921
+[2024-06-23T01:20:05.841+0000] {process_utils.py:191} INFO - poliwag     https://pokeapi.co/api/v2/pokemon/60/        124                 1            199.601          0.378762
+[2024-06-23T01:20:05.841+0000] {process_utils.py:191} INFO - poliwhirl   https://pokeapi.co/api/v2/pokemon/61/        200                 1            199.601          0.00199722
+[2024-06-23T01:20:05.841+0000] {process_utils.py:191} INFO - poliwrath   https://pokeapi.co/api/v2/pokemon/62/        540                 0            839.234          0.356556
+[2024-06-23T01:20:05.842+0000] {process_utils.py:191} INFO - abra        https://pokeapi.co/api/v2/pokemon/63/        195                 1            199.601          0.0230527
+[2024-06-23T01:20:05.842+0000] {process_utils.py:191} INFO - kadabra     https://pokeapi.co/api/v2/pokemon/64/        565                 0            839.234          0.326767
+[2024-06-23T01:20:05.842+0000] {process_utils.py:191} INFO - alakazam    https://pokeapi.co/api/v2/pokemon/65/        480                 1            199.601          1.40479
+[2024-06-23T01:20:05.843+0000] {process_utils.py:191} INFO - machop      https://pokeapi.co/api/v2/pokemon/66/        195                 1            199.601          0.0230527
+[2024-06-23T01:20:05.843+0000] {process_utils.py:191} INFO - machoke     https://pokeapi.co/api/v2/pokemon/67/        705                 0            839.234          0.159949
+[2024-06-23T01:20:05.843+0000] {process_utils.py:191} INFO - machamp     https://pokeapi.co/api/v2/pokemon/68/       1300                 0            839.234          0.549031
+[2024-06-23T01:20:05.843+0000] {process_utils.py:191} INFO - bellsprout  https://pokeapi.co/api/v2/pokemon/69/         40                 1            199.601          0.799601
+[2024-06-23T01:20:05.844+0000] {process_utils.py:191} INFO - weepinbell  https://pokeapi.co/api/v2/pokemon/70/         64                 1            199.601          0.679361
+[2024-06-23T01:20:05.844+0000] {process_utils.py:191} INFO - victreebel  https://pokeapi.co/api/v2/pokemon/71/        155                 1            199.601          0.223452
+[2024-06-23T01:20:05.844+0000] {process_utils.py:191} INFO - tentacool   https://pokeapi.co/api/v2/pokemon/72/        455                 1            199.601          1.27954
+[2024-06-23T01:20:05.845+0000] {process_utils.py:191} INFO - tentacruel  https://pokeapi.co/api/v2/pokemon/73/        550                 0            839.234          0.344641
+[2024-06-23T01:20:05.845+0000] {process_utils.py:191} INFO - geodude     https://pokeapi.co/api/v2/pokemon/74/        200                 1            199.601          0.00199722
+[2024-06-23T01:20:05.845+0000] {process_utils.py:191} INFO - graveler    https://pokeapi.co/api/v2/pokemon/75/       1050                 0            839.234          0.25114
+[2024-06-23T01:20:05.846+0000] {process_utils.py:191} INFO - golem       https://pokeapi.co/api/v2/pokemon/76/       3000                 2           2681.25           0.118881
+[2024-06-23T01:20:05.846+0000] {process_utils.py:191} INFO - ponyta      https://pokeapi.co/api/v2/pokemon/77/        300                 1            199.601          0.502996
+[2024-06-23T01:20:05.846+0000] {process_utils.py:191} INFO - rapidash    https://pokeapi.co/api/v2/pokemon/78/        950                 0            839.234          0.131984
+[2024-06-23T01:20:05.847+0000] {process_utils.py:191} INFO - slowpoke    https://pokeapi.co/api/v2/pokemon/79/        360                 1            199.601          0.803595
+[2024-06-23T01:20:05.847+0000] {process_utils.py:191} INFO - slowbro     https://pokeapi.co/api/v2/pokemon/80/        785                 0            839.234          0.0646236
+[2024-06-23T01:20:05.847+0000] {process_utils.py:191} INFO - poliwhirl   https://pokeapi.co/api/v2/pokemon/61/        200                 1            199.601          0.00199722
+[2024-06-23T01:20:05.848+0000] {process_utils.py:191} INFO - poliwrath   https://pokeapi.co/api/v2/pokemon/62/        540                 0            839.234          0.356556
+[2024-06-23T01:20:05.848+0000] {process_utils.py:191} INFO - abra        https://pokeapi.co/api/v2/pokemon/63/        195                 1            199.601          0.0230527
+[2024-06-23T01:20:05.848+0000] {process_utils.py:191} INFO - kadabra     https://pokeapi.co/api/v2/pokemon/64/        565                 0            839.234          0.326767
+[2024-06-23T01:20:05.849+0000] {process_utils.py:191} INFO - alakazam    https://pokeapi.co/api/v2/pokemon/65/        480                 1            199.601          1.40479
+[2024-06-23T01:20:05.849+0000] {process_utils.py:191} INFO - machop      https://pokeapi.co/api/v2/pokemon/66/        195                 1            199.601          0.0230527
+[2024-06-23T01:20:05.849+0000] {process_utils.py:191} INFO - machoke     https://pokeapi.co/api/v2/pokemon/67/        705                 0            839.234          0.159949
+[2024-06-23T01:20:05.849+0000] {process_utils.py:191} INFO - machamp     https://pokeapi.co/api/v2/pokemon/68/       1300                 0            839.234          0.549031
+[2024-06-23T01:20:05.850+0000] {process_utils.py:191} INFO - bellsprout  https://pokeapi.co/api/v2/pokemon/69/         40                 1            199.601          0.799601
+[2024-06-23T01:20:05.850+0000] {process_utils.py:191} INFO - weepinbell  https://pokeapi.co/api/v2/pokemon/70/         64                 1            199.601          0.679361
+[2024-06-23T01:20:05.850+0000] {process_utils.py:191} INFO - victreebel  https://pokeapi.co/api/v2/pokemon/71/        155                 1            199.601          0.223452
+[2024-06-23T01:20:05.851+0000] {process_utils.py:191} INFO - tentacool   https://pokeapi.co/api/v2/pokemon/72/        455                 1            199.601          1.27954
+[2024-06-23T01:20:05.851+0000] {process_utils.py:191} INFO - tentacruel  https://pokeapi.co/api/v2/pokemon/73/        550                 0            839.234          0.344641
+[2024-06-23T01:20:05.851+0000] {process_utils.py:191} INFO - geodude     https://pokeapi.co/api/v2/pokemon/74/        200                 1            199.601          0.00199722
+[2024-06-23T01:20:05.852+0000] {process_utils.py:191} INFO - graveler    https://pokeapi.co/api/v2/pokemon/75/       1050                 0            839.234          0.25114
+[2024-06-23T01:20:05.852+0000] {process_utils.py:191} INFO - golem       https://pokeapi.co/api/v2/pokemon/76/       3000                 2           2681.25           0.118881
+[2024-06-23T01:20:05.852+0000] {process_utils.py:191} INFO - ponyta      https://pokeapi.co/api/v2/pokemon/77/        300                 1            199.601          0.502996
+[2024-06-23T01:20:05.853+0000] {process_utils.py:191} INFO - rapidash    https://pokeapi.co/api/v2/pokemon/78/        950                 0            839.234          0.131984
+[2024-06-23T01:20:05.853+0000] {process_utils.py:191} INFO - slowpoke    https://pokeapi.co/api/v2/pokemon/79/        360                 1            199.601          0.803595
+[2024-06-23T01:20:05.853+0000] {process_utils.py:191} INFO - slowbro     https://pokeapi.co/api/v2/pokemon/80/        785                 0            839.234          0.0646236
+[2024-06-23T01:20:05.854+0000] {process_utils.py:191} INFO - magnemite   https://pokeapi.co/api/v2/pokemon/81/         60                 1            199.601          0.699401
+[2024-06-23T01:20:05.854+0000] {process_utils.py:191} INFO - magneton    https://pokeapi.co/api/v2/pokemon/82/        600                 0            839.234          0.285063
+[2024-06-23T01:20:05.854+0000] {process_utils.py:191} INFO - farfetchd   https://pokeapi.co/api/v2/pokemon/83/        150                 1            199.601          0.248502
+[2024-06-23T01:20:05.854+0000] {process_utils.py:191} INFO - doduo       https://pokeapi.co/api/v2/pokemon/84/        392                 1            199.601          0.963915
+[2024-06-23T01:20:05.855+0000] {process_utils.py:191} INFO - dodrio      https://pokeapi.co/api/v2/pokemon/85/        852                 0            839.234          0.015211
+[2024-06-23T01:20:05.855+0000] {process_utils.py:191} INFO - seel        https://pokeapi.co/api/v2/pokemon/86/        900                 0            839.234          0.072406
+[2024-06-23T01:20:05.855+0000] {process_utils.py:191} INFO - dewgong     https://pokeapi.co/api/v2/pokemon/87/       1200                 0            839.234          0.429875
+[2024-06-23T01:20:05.856+0000] {process_utils.py:191} INFO - grimer      https://pokeapi.co/api/v2/pokemon/88/        300                 1            199.601          0.502996
+[2024-06-23T01:20:05.856+0000] {process_utils.py:191} INFO - muk         https://pokeapi.co/api/v2/pokemon/89/        300                 1            199.601          0.502996
+[2024-06-23T01:20:05.856+0000] {process_utils.py:191} INFO - shellder    https://pokeapi.co/api/v2/pokemon/90/         40                 1            199.601          0.799601
+[2024-06-23T01:20:05.857+0000] {process_utils.py:191} INFO - cloyster    https://pokeapi.co/api/v2/pokemon/91/       1325                 0            839.234          0.57882
+[2024-06-23T01:20:05.857+0000] {process_utils.py:191} INFO - gastly      https://pokeapi.co/api/v2/pokemon/92/          1                 1            199.601          0.99499
+[2024-06-23T01:20:05.857+0000] {process_utils.py:191} INFO - haunter     https://pokeapi.co/api/v2/pokemon/93/          1                 1            199.601          0.99499
+[2024-06-23T01:20:05.858+0000] {process_utils.py:191} INFO - gengar      https://pokeapi.co/api/v2/pokemon/94/        405                 1            199.601          1.02904
+[2024-06-23T01:20:05.858+0000] {process_utils.py:191} INFO - onix        https://pokeapi.co/api/v2/pokemon/95/       2100                 2           2681.25           0.216783
+[2024-06-23T01:20:05.859+0000] {process_utils.py:191} INFO - drowzee     https://pokeapi.co/api/v2/pokemon/96/        324                 1            199.601          0.623236
+[2024-06-23T01:20:05.859+0000] {process_utils.py:191} INFO - hypno       https://pokeapi.co/api/v2/pokemon/97/        756                 0            839.234          0.0991789
+[2024-06-23T01:20:05.859+0000] {process_utils.py:191} INFO - krabby      https://pokeapi.co/api/v2/pokemon/98/         65                 1            199.601          0.674351
+[2024-06-23T01:20:05.860+0000] {process_utils.py:191} INFO - kingler     https://pokeapi.co/api/v2/pokemon/99/        600                 0            839.234          0.285063
+[2024-06-23T01:20:05.860+0000] {process_utils.py:191} INFO - voltorb     https://pokeapi.co/api/v2/pokemon/100/       104                 1            199.601          0.478961
+[2024-06-23T01:20:05.861+0000] {process_utils.py:191} INFO - electrode   https://pokeapi.co/api/v2/pokemon/101/       666                 0            839.234          0.20642
+[2024-06-23T01:20:05.861+0000] {process_utils.py:191} INFO - exeggcute   https://pokeapi.co/api/v2/pokemon/102/        25                 1            199.601          0.87475
+[2024-06-23T01:20:05.862+0000] {process_utils.py:191} INFO - exeggutor   https://pokeapi.co/api/v2/pokemon/103/      1200                 0            839.234          0.429875
+[2024-06-23T01:20:05.862+0000] {process_utils.py:191} INFO - cubone      https://pokeapi.co/api/v2/pokemon/104/        65                 1            199.601          0.674351
+[2024-06-23T01:20:05.862+0000] {process_utils.py:191} INFO - marowak     https://pokeapi.co/api/v2/pokemon/105/       450                 1            199.601          1.25449
+[2024-06-23T01:20:05.863+0000] {process_utils.py:191} INFO - hitmonlee   https://pokeapi.co/api/v2/pokemon/106/       498                 1            199.601          1.49497
+[2024-06-23T01:20:05.863+0000] {process_utils.py:191} INFO - hitmonchan  https://pokeapi.co/api/v2/pokemon/107/       502                 1            199.601          1.51501
+[2024-06-23T01:20:05.864+0000] {process_utils.py:191} INFO - lickitung   https://pokeapi.co/api/v2/pokemon/108/       655                 0            839.234          0.219527
+[2024-06-23T01:20:05.864+0000] {process_utils.py:191} INFO - koffing     https://pokeapi.co/api/v2/pokemon/109/        10                 1            199.601          0.9499
+[2024-06-23T01:20:05.865+0000] {process_utils.py:191} INFO - weezing     https://pokeapi.co/api/v2/pokemon/110/        95                 1            199.601          0.524051
+[2024-06-23T01:20:05.865+0000] {process_utils.py:191} INFO - rhyhorn     https://pokeapi.co/api/v2/pokemon/111/      1150                 0            839.234          0.370297
+[2024-06-23T01:20:05.866+0000] {process_utils.py:191} INFO - rhydon      https://pokeapi.co/api/v2/pokemon/112/      1200                 0            839.234          0.429875
+[2024-06-23T01:20:05.866+0000] {process_utils.py:191} INFO - chansey     https://pokeapi.co/api/v2/pokemon/113/       346                 1            199.601          0.733455
+[2024-06-23T01:20:05.866+0000] {process_utils.py:191} INFO - tangela     https://pokeapi.co/api/v2/pokemon/114/       350                 1            199.601          0.753495
+[2024-06-23T01:20:05.867+0000] {process_utils.py:191} INFO - kangaskhan  https://pokeapi.co/api/v2/pokemon/115/       800                 0            839.234          0.0467502
+[2024-06-23T01:20:05.867+0000] {process_utils.py:191} INFO - horsea      https://pokeapi.co/api/v2/pokemon/116/        80                 1            199.601          0.599201
+[2024-06-23T01:20:05.868+0000] {process_utils.py:191} INFO - seadra      https://pokeapi.co/api/v2/pokemon/117/       250                 1            199.601          0.252497
+[2024-06-23T01:20:05.868+0000] {process_utils.py:191} INFO - goldeen     https://pokeapi.co/api/v2/pokemon/118/       150                 1            199.601          0.248502
+[2024-06-23T01:20:05.869+0000] {process_utils.py:191} INFO - seaking     https://pokeapi.co/api/v2/pokemon/119/       390                 1            199.601          0.953895
+[2024-06-23T01:20:05.869+0000] {process_utils.py:191} INFO - staryu      https://pokeapi.co/api/v2/pokemon/120/       345                 1            199.601          0.728445
+[2024-06-23T01:20:05.869+0000] {process_utils.py:191} INFO - magnemite   https://pokeapi.co/api/v2/pokemon/81/         60                 1            199.601          0.699401
+[2024-06-23T01:20:05.870+0000] {process_utils.py:191} INFO - magneton    https://pokeapi.co/api/v2/pokemon/82/        600                 0            839.234          0.285063
+[2024-06-23T01:20:05.870+0000] {process_utils.py:191} INFO - farfetchd   https://pokeapi.co/api/v2/pokemon/83/        150                 1            199.601          0.248502
+[2024-06-23T01:20:05.871+0000] {process_utils.py:191} INFO - doduo       https://pokeapi.co/api/v2/pokemon/84/        392                 1            199.601          0.963915
+[2024-06-23T01:20:05.871+0000] {process_utils.py:191} INFO - dodrio      https://pokeapi.co/api/v2/pokemon/85/        852                 0            839.234          0.015211
+[2024-06-23T01:20:05.872+0000] {process_utils.py:191} INFO - seel        https://pokeapi.co/api/v2/pokemon/86/        900                 0            839.234          0.072406
+[2024-06-23T01:20:05.872+0000] {process_utils.py:191} INFO - dewgong     https://pokeapi.co/api/v2/pokemon/87/       1200                 0            839.234          0.429875
+[2024-06-23T01:20:05.873+0000] {process_utils.py:191} INFO - grimer      https://pokeapi.co/api/v2/pokemon/88/        300                 1            199.601          0.502996
+[2024-06-23T01:20:05.873+0000] {process_utils.py:191} INFO - muk         https://pokeapi.co/api/v2/pokemon/89/        300                 1            199.601          0.502996
+[2024-06-23T01:20:05.873+0000] {process_utils.py:191} INFO - shellder    https://pokeapi.co/api/v2/pokemon/90/         40                 1            199.601          0.799601
+[2024-06-23T01:20:05.874+0000] {process_utils.py:191} INFO - cloyster    https://pokeapi.co/api/v2/pokemon/91/       1325                 0            839.234          0.57882
+[2024-06-23T01:20:05.874+0000] {process_utils.py:191} INFO - gastly      https://pokeapi.co/api/v2/pokemon/92/          1                 1            199.601          0.99499
+[2024-06-23T01:20:05.875+0000] {process_utils.py:191} INFO - haunter     https://pokeapi.co/api/v2/pokemon/93/          1                 1            199.601          0.99499
+[2024-06-23T01:20:05.875+0000] {process_utils.py:191} INFO - gengar      https://pokeapi.co/api/v2/pokemon/94/        405                 1            199.601          1.02904
+[2024-06-23T01:20:05.876+0000] {process_utils.py:191} INFO - onix        https://pokeapi.co/api/v2/pokemon/95/       2100                 2           2681.25           0.216783
+[2024-06-23T01:20:05.876+0000] {process_utils.py:191} INFO - drowzee     https://pokeapi.co/api/v2/pokemon/96/        324                 1            199.601          0.623236
+[2024-06-23T01:20:05.877+0000] {process_utils.py:191} INFO - hypno       https://pokeapi.co/api/v2/pokemon/97/        756                 0            839.234          0.0991789
+[2024-06-23T01:20:05.877+0000] {process_utils.py:191} INFO - krabby      https://pokeapi.co/api/v2/pokemon/98/         65                 1            199.601          0.674351
+[2024-06-23T01:20:05.877+0000] {process_utils.py:191} INFO - kingler     https://pokeapi.co/api/v2/pokemon/99/        600                 0            839.234          0.285063
+[2024-06-23T01:20:05.878+0000] {process_utils.py:191} INFO - voltorb     https://pokeapi.co/api/v2/pokemon/100/       104                 1            199.601          0.478961
+[2024-06-23T01:20:05.878+0000] {process_utils.py:191} INFO - electrode   https://pokeapi.co/api/v2/pokemon/101/       666                 0            839.234          0.20642
+[2024-06-23T01:20:05.879+0000] {process_utils.py:191} INFO - exeggcute   https://pokeapi.co/api/v2/pokemon/102/        25                 1            199.601          0.87475
+[2024-06-23T01:20:05.879+0000] {process_utils.py:191} INFO - exeggutor   https://pokeapi.co/api/v2/pokemon/103/      1200                 0            839.234          0.429875
+[2024-06-23T01:20:05.880+0000] {process_utils.py:191} INFO - cubone      https://pokeapi.co/api/v2/pokemon/104/        65                 1            199.601          0.674351
+[2024-06-23T01:20:05.880+0000] {process_utils.py:191} INFO - marowak     https://pokeapi.co/api/v2/pokemon/105/       450                 1            199.601          1.25449
+[2024-06-23T01:20:05.881+0000] {process_utils.py:191} INFO - hitmonlee   https://pokeapi.co/api/v2/pokemon/106/       498                 1            199.601          1.49497
+[2024-06-23T01:20:05.881+0000] {process_utils.py:191} INFO - hitmonchan  https://pokeapi.co/api/v2/pokemon/107/       502                 1            199.601          1.51501
+[2024-06-23T01:20:05.882+0000] {process_utils.py:191} INFO - lickitung   https://pokeapi.co/api/v2/pokemon/108/       655                 0            839.234          0.219527
+[2024-06-23T01:20:05.882+0000] {process_utils.py:191} INFO - koffing     https://pokeapi.co/api/v2/pokemon/109/        10                 1            199.601          0.9499
+[2024-06-23T01:20:05.882+0000] {process_utils.py:191} INFO - weezing     https://pokeapi.co/api/v2/pokemon/110/        95                 1            199.601          0.524051
+[2024-06-23T01:20:05.883+0000] {process_utils.py:191} INFO - rhyhorn     https://pokeapi.co/api/v2/pokemon/111/      1150                 0            839.234          0.370297
+[2024-06-23T01:20:05.883+0000] {process_utils.py:191} INFO - rhydon      https://pokeapi.co/api/v2/pokemon/112/      1200                 0            839.234          0.429875
+[2024-06-23T01:20:05.884+0000] {process_utils.py:191} INFO - chansey     https://pokeapi.co/api/v2/pokemon/113/       346                 1            199.601          0.733455
+[2024-06-23T01:20:05.884+0000] {process_utils.py:191} INFO - tangela     https://pokeapi.co/api/v2/pokemon/114/       350                 1            199.601          0.753495
+[2024-06-23T01:20:05.885+0000] {process_utils.py:191} INFO - kangaskhan  https://pokeapi.co/api/v2/pokemon/115/       800                 0            839.234          0.0467502
+[2024-06-23T01:20:05.885+0000] {process_utils.py:191} INFO - horsea      https://pokeapi.co/api/v2/pokemon/116/        80                 1            199.601          0.599201
+[2024-06-23T01:20:05.885+0000] {process_utils.py:191} INFO - seadra      https://pokeapi.co/api/v2/pokemon/117/       250                 1            199.601          0.252497
+[2024-06-23T01:20:05.886+0000] {process_utils.py:191} INFO - goldeen     https://pokeapi.co/api/v2/pokemon/118/       150                 1            199.601          0.248502
+[2024-06-23T01:20:05.886+0000] {process_utils.py:191} INFO - seaking     https://pokeapi.co/api/v2/pokemon/119/       390                 1            199.601          0.953895
+[2024-06-23T01:20:05.886+0000] {process_utils.py:191} INFO - staryu      https://pokeapi.co/api/v2/pokemon/120/       345                 1            199.601          0.728445
+[2024-06-23T01:20:05.887+0000] {process_utils.py:191} INFO - starmie     https://pokeapi.co/api/v2/pokemon/121/       800                 0            839.234          0.0467502
+[2024-06-23T01:20:05.887+0000] {process_utils.py:191} INFO - mr-mime     https://pokeapi.co/api/v2/pokemon/122/       545                 0            839.234          0.350599
+[2024-06-23T01:20:05.887+0000] {process_utils.py:191} INFO - scyther     https://pokeapi.co/api/v2/pokemon/123/       560                 0            839.234          0.332725
+[2024-06-23T01:20:05.888+0000] {process_utils.py:191} INFO - jynx        https://pokeapi.co/api/v2/pokemon/124/       406                 1            199.601          1.03405
+[2024-06-23T01:20:05.889+0000] {process_utils.py:191} INFO - electabuzz  https://pokeapi.co/api/v2/pokemon/125/       300                 1            199.601          0.502996
+[2024-06-23T01:20:05.889+0000] {process_utils.py:191} INFO - magmar      https://pokeapi.co/api/v2/pokemon/126/       445                 1            199.601          1.22944
+[2024-06-23T01:20:05.889+0000] {process_utils.py:191} INFO - pinsir      https://pokeapi.co/api/v2/pokemon/127/       550                 0            839.234          0.344641
+[2024-06-23T01:20:05.890+0000] {process_utils.py:191} INFO - tauros      https://pokeapi.co/api/v2/pokemon/128/       884                 0            839.234          0.053341
+[2024-06-23T01:20:05.890+0000] {process_utils.py:191} INFO - magikarp    https://pokeapi.co/api/v2/pokemon/129/       100                 1            199.601          0.499001
+[2024-06-23T01:20:05.891+0000] {process_utils.py:191} INFO - gyarados    https://pokeapi.co/api/v2/pokemon/130/      2350                 2           2681.25           0.123543
+[2024-06-23T01:20:05.891+0000] {process_utils.py:191} INFO - lapras      https://pokeapi.co/api/v2/pokemon/131/      2200                 2           2681.25           0.179487
+[2024-06-23T01:20:05.892+0000] {process_utils.py:191} INFO - ditto       https://pokeapi.co/api/v2/pokemon/132/        40                 1            199.601          0.799601
+[2024-06-23T01:20:05.892+0000] {process_utils.py:191} INFO - eevee       https://pokeapi.co/api/v2/pokemon/133/        65                 1            199.601          0.674351
+[2024-06-23T01:20:05.892+0000] {process_utils.py:191} INFO - vaporeon    https://pokeapi.co/api/v2/pokemon/134/       290                 1            199.601          0.452896
+[2024-06-23T01:20:05.893+0000] {process_utils.py:191} INFO - jolteon     https://pokeapi.co/api/v2/pokemon/135/       245                 1            199.601          0.227447
+[2024-06-23T01:20:05.893+0000] {process_utils.py:191} INFO - flareon     https://pokeapi.co/api/v2/pokemon/136/       250                 1            199.601          0.252497
+[2024-06-23T01:20:05.894+0000] {process_utils.py:191} INFO - porygon     https://pokeapi.co/api/v2/pokemon/137/       365                 1            199.601          0.828645
+[2024-06-23T01:20:05.894+0000] {process_utils.py:191} INFO - omanyte     https://pokeapi.co/api/v2/pokemon/138/        75                 1            199.601          0.624251
+[2024-06-23T01:20:05.895+0000] {process_utils.py:191} INFO - omastar     https://pokeapi.co/api/v2/pokemon/139/       350                 1            199.601          0.753495
+[2024-06-23T01:20:05.895+0000] {process_utils.py:191} INFO - kabuto      https://pokeapi.co/api/v2/pokemon/140/       115                 1            199.601          0.423852
+[2024-06-23T01:20:05.895+0000] {process_utils.py:191} INFO - kabutops    https://pokeapi.co/api/v2/pokemon/141/       405                 1            199.601          1.02904
+[2024-06-23T01:20:05.896+0000] {process_utils.py:191} INFO - aerodactyl  https://pokeapi.co/api/v2/pokemon/142/       590                 0            839.234          0.296978
+[2024-06-23T01:20:05.896+0000] {process_utils.py:191} INFO - snorlax     https://pokeapi.co/api/v2/pokemon/143/      4600                 2           2681.25           0.715618
+[2024-06-23T01:20:05.897+0000] {process_utils.py:191} INFO - articuno    https://pokeapi.co/api/v2/pokemon/144/       554                 0            839.234          0.339875
+[2024-06-23T01:20:05.897+0000] {process_utils.py:191} INFO - zapdos      https://pokeapi.co/api/v2/pokemon/145/       526                 0            839.234          0.373238
+[2024-06-23T01:20:05.898+0000] {process_utils.py:191} INFO - moltres     https://pokeapi.co/api/v2/pokemon/146/       600                 0            839.234          0.285063
+[2024-06-23T01:20:05.898+0000] {process_utils.py:191} INFO - dratini     https://pokeapi.co/api/v2/pokemon/147/        33                 1            199.601          0.83467
+[2024-06-23T01:20:05.899+0000] {process_utils.py:191} INFO - dragonair   https://pokeapi.co/api/v2/pokemon/148/       165                 1            199.601          0.173352
+[2024-06-23T01:20:05.899+0000] {process_utils.py:191} INFO - dragonite   https://pokeapi.co/api/v2/pokemon/149/      2100                 2           2681.25           0.216783
+[2024-06-23T01:20:05.899+0000] {process_utils.py:191} INFO - mewtwo      https://pokeapi.co/api/v2/pokemon/150/      1220                 0            839.234          0.453706
+[2024-06-23T01:20:05.900+0000] {process_utils.py:191} INFO - mew         https://pokeapi.co/api/v2/pokemon/151/        40                 1            199.601          0.799601
+[2024-06-23T01:20:05.900+0000] {process_utils.py:191} INFO - chikorita   https://pokeapi.co/api/v2/pokemon/152/        64                 1            199.601          0.679361
+[2024-06-23T01:20:05.901+0000] {process_utils.py:191} INFO - bayleef     https://pokeapi.co/api/v2/pokemon/153/       158                 1            199.601          0.208422
+[2024-06-23T01:20:05.901+0000] {process_utils.py:191} INFO - meganium    https://pokeapi.co/api/v2/pokemon/154/      1005                 0            839.234          0.19752
+[2024-06-23T01:20:05.902+0000] {process_utils.py:191} INFO - cyndaquil   https://pokeapi.co/api/v2/pokemon/155/        79                 1            199.601          0.604211
+[2024-06-23T01:20:05.902+0000] {process_utils.py:191} INFO - quilava     https://pokeapi.co/api/v2/pokemon/156/       190                 1            199.601          0.0481026
+[2024-06-23T01:20:05.902+0000] {process_utils.py:191} INFO - typhlosion  https://pokeapi.co/api/v2/pokemon/157/       795                 0            839.234          0.052708
+[2024-06-23T01:20:05.903+0000] {process_utils.py:191} INFO - totodile    https://pokeapi.co/api/v2/pokemon/158/        95                 1            199.601          0.524051
+[2024-06-23T01:20:05.903+0000] {process_utils.py:191} INFO - croconaw    https://pokeapi.co/api/v2/pokemon/159/       250                 1            199.601          0.252497
+[2024-06-23T01:20:05.904+0000] {process_utils.py:191} INFO - feraligatr  https://pokeapi.co/api/v2/pokemon/160/       888                 0            839.234          0.0581073
+[2024-06-23T01:20:05.904+0000] {process_utils.py:191} INFO - ----------------------------------------------------------------------------------------------------
+[2024-06-23T01:20:05.904+0000] {process_utils.py:191} INFO - clusters detail:
+[2024-06-23T01:20:05.905+0000] {process_utils.py:191} INFO - {
+[2024-06-23T01:20:05.905+0000] {process_utils.py:191} INFO -     "n_clusters": 3,
+[2024-06-23T01:20:05.905+0000] {process_utils.py:191} INFO -     "centroids": [
+[2024-06-23T01:20:05.906+0000] {process_utils.py:191} INFO -         839.2343749999998,
+[2024-06-23T01:20:05.906+0000] {process_utils.py:191} INFO -         199.60135135135096,
+[2024-06-23T01:20:05.906+0000] {process_utils.py:191} INFO -         2681.25
+[2024-06-23T01:20:05.906+0000] {process_utils.py:191} INFO -     ]
+[2024-06-23T01:20:05.907+0000] {process_utils.py:191} INFO - }
+[2024-06-23T01:20:05.907+0000] {process_utils.py:191} INFO - ----------------------------------------------------------------------------------------------------
+[2024-06-23T01:20:05.907+0000] {process_utils.py:191} INFO - weight statistics:
+[2024-06-23T01:20:05.908+0000] {process_utils.py:191} INFO - {
+[2024-06-23T01:20:05.908+0000] {process_utils.py:191} INFO -     "max": 4600,
+[2024-06-23T01:20:05.908+0000] {process_utils.py:191} INFO -     "min": 1,
+[2024-06-23T01:20:05.909+0000] {process_utils.py:191} INFO -     "mean": 475.91818181818184,
+[2024-06-23T01:20:05.909+0000] {process_utils.py:191} INFO -     "median": 310.0,
+[2024-06-23T01:20:05.909+0000] {process_utils.py:191} INFO -     "stdev:": 570.662150557465
+[2024-06-23T01:20:05.910+0000] {process_utils.py:191} INFO - }
+[2024-06-23T01:20:05.910+0000] {process_utils.py:191} INFO - ----------------------------------------------------------------------------------------------------
+[2024-06-23T01:20:05.910+0000] {process_utils.py:191} INFO - anonymized information:
+[2024-06-23T01:20:05.911+0000] {process_utils.py:191} INFO -   index  name          parent cluster
+[2024-06-23T01:20:05.911+0000] {process_utils.py:191} INFO - -------  ----------  ----------------
+[2024-06-23T01:20:05.911+0000] {process_utils.py:191} INFO -       0  bulbasaur            199.601
+[2024-06-23T01:20:05.912+0000] {process_utils.py:191} INFO -       1  ivysaur              199.601
+[2024-06-23T01:20:05.912+0000] {process_utils.py:191} INFO -       2  venusaur             839.234
+[2024-06-23T01:20:05.912+0000] {process_utils.py:191} INFO -       3  charmander           199.601
+[2024-06-23T01:20:05.913+0000] {process_utils.py:191} INFO -       4  charmeleon           199.601
+[2024-06-23T01:20:05.913+0000] {process_utils.py:191} INFO -       5  charizard            839.234
+[2024-06-23T01:20:05.913+0000] {process_utils.py:191} INFO -       6  squirtle             199.601
+[2024-06-23T01:20:05.914+0000] {process_utils.py:191} INFO -       7  wartortle            199.601
+[2024-06-23T01:20:05.914+0000] {process_utils.py:191} INFO -       8  blastoise            839.234
+[2024-06-23T01:20:05.914+0000] {process_utils.py:191} INFO -       9  caterpie             199.601
+[2024-06-23T01:20:05.914+0000] {process_utils.py:191} INFO -      10  metapod              199.601
+[2024-06-23T01:20:05.915+0000] {process_utils.py:191} INFO -      11  butterfree           199.601
+[2024-06-23T01:20:05.915+0000] {process_utils.py:191} INFO -      12  weedle               199.601
+[2024-06-23T01:20:05.915+0000] {process_utils.py:191} INFO -      13  kakuna               199.601
+[2024-06-23T01:20:05.916+0000] {process_utils.py:191} INFO -      14  beedrill             199.601
+[2024-06-23T01:20:05.916+0000] {process_utils.py:191} INFO -      15  pidgey               199.601
+[2024-06-23T01:20:05.916+0000] {process_utils.py:191} INFO -      16  pidgeotto            199.601
+[2024-06-23T01:20:05.917+0000] {process_utils.py:191} INFO -      17  pidgeot              199.601
+[2024-06-23T01:20:05.917+0000] {process_utils.py:191} INFO -      18  rattata              199.601
+[2024-06-23T01:20:05.917+0000] {process_utils.py:191} INFO -      19  raticate             199.601
+[2024-06-23T01:20:05.918+0000] {process_utils.py:191} INFO -      20  spearow              199.601
+[2024-06-23T01:20:05.918+0000] {process_utils.py:191} INFO -      21  fearow               199.601
+[2024-06-23T01:20:05.918+0000] {process_utils.py:191} INFO -      22  ekans                199.601
+[2024-06-23T01:20:05.919+0000] {process_utils.py:191} INFO -      23  arbok                839.234
+[2024-06-23T01:20:05.919+0000] {process_utils.py:191} INFO -      24  pikachu              199.601
+[2024-06-23T01:20:05.920+0000] {process_utils.py:191} INFO -      25  raichu               199.601
+[2024-06-23T01:20:05.920+0000] {process_utils.py:191} INFO -      26  sandshrew            199.601
+[2024-06-23T01:20:05.920+0000] {process_utils.py:191} INFO -      27  sandslash            199.601
+[2024-06-23T01:20:05.921+0000] {process_utils.py:191} INFO -      28  nidoran-f            199.601
+[2024-06-23T01:20:05.921+0000] {process_utils.py:191} INFO -      29  nidorina             199.601
+[2024-06-23T01:20:05.921+0000] {process_utils.py:191} INFO -      30  nidoqueen            839.234
+[2024-06-23T01:20:05.922+0000] {process_utils.py:191} INFO -      31  nidoran-m            199.601
+[2024-06-23T01:20:05.922+0000] {process_utils.py:191} INFO -      32  nidorino             199.601
+[2024-06-23T01:20:05.922+0000] {process_utils.py:191} INFO -      33  nidoking             839.234
+[2024-06-23T01:20:05.922+0000] {process_utils.py:191} INFO -      34  clefairy             199.601
+[2024-06-23T01:20:05.923+0000] {process_utils.py:191} INFO -      35  clefable             199.601
+[2024-06-23T01:20:05.923+0000] {process_utils.py:191} INFO -      36  vulpix               199.601
+[2024-06-23T01:20:05.923+0000] {process_utils.py:191} INFO -      37  ninetales            199.601
+[2024-06-23T01:20:05.924+0000] {process_utils.py:191} INFO -      38  jigglypuff           199.601
+[2024-06-23T01:20:05.924+0000] {process_utils.py:191} INFO -      39  wigglytuff           199.601
+[2024-06-23T01:20:05.924+0000] {process_utils.py:191} INFO -      40  zubat                199.601
+[2024-06-23T01:20:05.925+0000] {process_utils.py:191} INFO -      41  golbat               839.234
+[2024-06-23T01:20:05.925+0000] {process_utils.py:191} INFO -      42  oddish               199.601
+[2024-06-23T01:20:05.925+0000] {process_utils.py:191} INFO -      43  gloom                199.601
+[2024-06-23T01:20:05.926+0000] {process_utils.py:191} INFO -      44  vileplume            199.601
+[2024-06-23T01:20:05.926+0000] {process_utils.py:191} INFO -      45  paras                199.601
+[2024-06-23T01:20:05.926+0000] {process_utils.py:191} INFO -      46  parasect             199.601
+[2024-06-23T01:20:05.927+0000] {process_utils.py:191} INFO -      47  venonat              199.601
+[2024-06-23T01:20:05.927+0000] {process_utils.py:191} INFO -      48  venomoth             199.601
+[2024-06-23T01:20:05.927+0000] {process_utils.py:191} INFO -      49  diglett              199.601
+[2024-06-23T01:20:05.928+0000] {process_utils.py:191} INFO -      50  dugtrio              199.601
+[2024-06-23T01:20:05.928+0000] {process_utils.py:191} INFO -      51  meowth               199.601
+[2024-06-23T01:20:05.928+0000] {process_utils.py:191} INFO -      52  persian              199.601
+[2024-06-23T01:20:05.929+0000] {process_utils.py:191} INFO -      53  psyduck              199.601
+[2024-06-23T01:20:05.929+0000] {process_utils.py:191} INFO -      54  golduck              839.234
+[2024-06-23T01:20:05.929+0000] {process_utils.py:191} INFO -      55  mankey               199.601
+[2024-06-23T01:20:05.930+0000] {process_utils.py:191} INFO -      56  primeape             199.601
+[2024-06-23T01:20:05.930+0000] {process_utils.py:191} INFO -      57  growlithe            199.601
+[2024-06-23T01:20:05.930+0000] {process_utils.py:191} INFO -      58  arcanine             839.234
+[2024-06-23T01:20:05.931+0000] {process_utils.py:191} INFO -      59  poliwag              199.601
+[2024-06-23T01:20:05.931+0000] {process_utils.py:191} INFO -      60  poliwhirl            199.601
+[2024-06-23T01:20:05.931+0000] {process_utils.py:191} INFO -      61  poliwrath            839.234
+[2024-06-23T01:20:05.932+0000] {process_utils.py:191} INFO -      62  abra                 199.601
+[2024-06-23T01:20:05.932+0000] {process_utils.py:191} INFO -      63  kadabra              839.234
+[2024-06-23T01:20:05.932+0000] {process_utils.py:191} INFO -      64  alakazam             199.601
+[2024-06-23T01:20:05.933+0000] {process_utils.py:191} INFO -      65  machop               199.601
+[2024-06-23T01:20:05.933+0000] {process_utils.py:191} INFO -      66  machoke              839.234
+[2024-06-23T01:20:05.933+0000] {process_utils.py:191} INFO -      67  machamp              839.234
+[2024-06-23T01:20:05.934+0000] {process_utils.py:191} INFO -      68  bellsprout           199.601
+[2024-06-23T01:20:05.934+0000] {process_utils.py:191} INFO -      69  weepinbell           199.601
+[2024-06-23T01:20:05.934+0000] {process_utils.py:191} INFO -      70  victreebel           199.601
+[2024-06-23T01:20:05.934+0000] {process_utils.py:191} INFO -      71  tentacool            199.601
+[2024-06-23T01:20:05.935+0000] {process_utils.py:191} INFO -      72  tentacruel           839.234
+[2024-06-23T01:20:05.935+0000] {process_utils.py:191} INFO -      73  geodude              199.601
+[2024-06-23T01:20:05.935+0000] {process_utils.py:191} INFO -      74  graveler             839.234
+[2024-06-23T01:20:05.936+0000] {process_utils.py:191} INFO -      75  golem               2681.25
+[2024-06-23T01:20:05.936+0000] {process_utils.py:191} INFO -      76  ponyta               199.601
+[2024-06-23T01:20:05.936+0000] {process_utils.py:191} INFO -      77  rapidash             839.234
+[2024-06-23T01:20:05.937+0000] {process_utils.py:191} INFO -      78  slowpoke             199.601
+[2024-06-23T01:20:05.937+0000] {process_utils.py:191} INFO -      79  slowbro              839.234
+[2024-06-23T01:20:05.937+0000] {process_utils.py:191} INFO -      80  poliwhirl            199.601
+[2024-06-23T01:20:05.938+0000] {process_utils.py:191} INFO -      81  poliwrath            839.234
+[2024-06-23T01:20:05.938+0000] {process_utils.py:191} INFO -      82  abra                 199.601
+[2024-06-23T01:20:05.938+0000] {process_utils.py:191} INFO -      83  kadabra              839.234
+[2024-06-23T01:20:05.939+0000] {process_utils.py:191} INFO -      84  alakazam             199.601
+[2024-06-23T01:20:05.939+0000] {process_utils.py:191} INFO -      85  machop               199.601
+[2024-06-23T01:20:05.939+0000] {process_utils.py:191} INFO -      86  machoke              839.234
+[2024-06-23T01:20:05.940+0000] {process_utils.py:191} INFO -      87  machamp              839.234
+[2024-06-23T01:20:05.940+0000] {process_utils.py:191} INFO -      88  bellsprout           199.601
+[2024-06-23T01:20:05.940+0000] {process_utils.py:191} INFO -      89  weepinbell           199.601
+[2024-06-23T01:20:05.941+0000] {process_utils.py:191} INFO -      90  victreebel           199.601
+[2024-06-23T01:20:05.941+0000] {process_utils.py:191} INFO -      91  tentacool            199.601
+[2024-06-23T01:20:05.941+0000] {process_utils.py:191} INFO -      92  tentacruel           839.234
+[2024-06-23T01:20:05.942+0000] {process_utils.py:191} INFO -      93  geodude              199.601
+[2024-06-23T01:20:05.942+0000] {process_utils.py:191} INFO -      94  graveler             839.234
+[2024-06-23T01:20:05.942+0000] {process_utils.py:191} INFO -      95  golem               2681.25
+[2024-06-23T01:20:05.943+0000] {process_utils.py:191} INFO -      96  ponyta               199.601
+[2024-06-23T01:20:05.943+0000] {process_utils.py:191} INFO -      97  rapidash             839.234
+[2024-06-23T01:20:05.943+0000] {process_utils.py:191} INFO -      98  slowpoke             199.601
+[2024-06-23T01:20:05.944+0000] {process_utils.py:191} INFO -      99  slowbro              839.234
+[2024-06-23T01:20:05.944+0000] {process_utils.py:191} INFO -     100  magnemite            199.601
+[2024-06-23T01:20:05.944+0000] {process_utils.py:191} INFO -     101  magneton             839.234
+[2024-06-23T01:20:05.945+0000] {process_utils.py:191} INFO -     102  farfetchd            199.601
+[2024-06-23T01:20:05.945+0000] {process_utils.py:191} INFO -     103  doduo                199.601
+[2024-06-23T01:20:05.945+0000] {process_utils.py:191} INFO -     104  dodrio               839.234
+[2024-06-23T01:20:05.946+0000] {process_utils.py:191} INFO -     105  seel                 839.234
+[2024-06-23T01:20:05.946+0000] {process_utils.py:191} INFO -     106  dewgong              839.234
+[2024-06-23T01:20:05.946+0000] {process_utils.py:191} INFO -     107  grimer               199.601
+[2024-06-23T01:20:05.946+0000] {process_utils.py:191} INFO -     108  muk                  199.601
+[2024-06-23T01:20:05.947+0000] {process_utils.py:191} INFO -     109  shellder             199.601
+[2024-06-23T01:20:05.947+0000] {process_utils.py:191} INFO -     110  cloyster             839.234
+[2024-06-23T01:20:05.947+0000] {process_utils.py:191} INFO -     111  gastly               199.601
+[2024-06-23T01:20:05.948+0000] {process_utils.py:191} INFO -     112  haunter              199.601
+[2024-06-23T01:20:05.948+0000] {process_utils.py:191} INFO -     113  gengar               199.601
+[2024-06-23T01:20:05.948+0000] {process_utils.py:191} INFO -     114  onix                2681.25
+[2024-06-23T01:20:05.949+0000] {process_utils.py:191} INFO -     115  drowzee              199.601
+[2024-06-23T01:20:05.949+0000] {process_utils.py:191} INFO -     116  hypno                839.234
+[2024-06-23T01:20:05.949+0000] {process_utils.py:191} INFO -     117  krabby               199.601
+[2024-06-23T01:20:05.950+0000] {process_utils.py:191} INFO -     118  kingler              839.234
+[2024-06-23T01:20:05.950+0000] {process_utils.py:191} INFO -     119  voltorb              199.601
+[2024-06-23T01:20:05.950+0000] {process_utils.py:191} INFO -     120  electrode            839.234
+[2024-06-23T01:20:05.951+0000] {process_utils.py:191} INFO -     121  exeggcute            199.601
+[2024-06-23T01:20:05.951+0000] {process_utils.py:191} INFO -     122  exeggutor            839.234
+[2024-06-23T01:20:05.951+0000] {process_utils.py:191} INFO -     123  cubone               199.601
+[2024-06-23T01:20:05.952+0000] {process_utils.py:191} INFO -     124  marowak              199.601
+[2024-06-23T01:20:05.952+0000] {process_utils.py:191} INFO -     125  hitmonlee            199.601
+[2024-06-23T01:20:05.952+0000] {process_utils.py:191} INFO -     126  hitmonchan           199.601
+[2024-06-23T01:20:05.953+0000] {process_utils.py:191} INFO -     127  lickitung            839.234
+[2024-06-23T01:20:05.953+0000] {process_utils.py:191} INFO -     128  koffing              199.601
+[2024-06-23T01:20:05.953+0000] {process_utils.py:191} INFO -     129  weezing              199.601
+[2024-06-23T01:20:05.954+0000] {process_utils.py:191} INFO -     130  rhyhorn              839.234
+[2024-06-23T01:20:05.954+0000] {process_utils.py:191} INFO -     131  rhydon               839.234
+[2024-06-23T01:20:05.954+0000] {process_utils.py:191} INFO -     132  chansey              199.601
+[2024-06-23T01:20:05.955+0000] {process_utils.py:191} INFO -     133  tangela              199.601
+[2024-06-23T01:20:05.955+0000] {process_utils.py:191} INFO -     134  kangaskhan           839.234
+[2024-06-23T01:20:05.955+0000] {process_utils.py:191} INFO -     135  horsea               199.601
+[2024-06-23T01:20:05.956+0000] {process_utils.py:191} INFO -     136  seadra               199.601
+[2024-06-23T01:20:05.956+0000] {process_utils.py:191} INFO -     137  goldeen              199.601
+[2024-06-23T01:20:05.956+0000] {process_utils.py:191} INFO -     138  seaking              199.601
+[2024-06-23T01:20:05.957+0000] {process_utils.py:191} INFO -     139  staryu               199.601
+[2024-06-23T01:20:05.957+0000] {process_utils.py:191} INFO -     140  magnemite            199.601
+[2024-06-23T01:20:05.957+0000] {process_utils.py:191} INFO -     141  magneton             839.234
+[2024-06-23T01:20:05.958+0000] {process_utils.py:191} INFO -     142  farfetchd            199.601
+[2024-06-23T01:20:05.958+0000] {process_utils.py:191} INFO -     143  doduo                199.601
+[2024-06-23T01:20:05.958+0000] {process_utils.py:191} INFO -     144  dodrio               839.234
+[2024-06-23T01:20:05.958+0000] {process_utils.py:191} INFO -     145  seel                 839.234
+[2024-06-23T01:20:05.959+0000] {process_utils.py:191} INFO -     146  dewgong              839.234
+[2024-06-23T01:20:05.959+0000] {process_utils.py:191} INFO -     147  grimer               199.601
+[2024-06-23T01:20:05.959+0000] {process_utils.py:191} INFO -     148  muk                  199.601
+[2024-06-23T01:20:05.960+0000] {process_utils.py:191} INFO -     149  shellder             199.601
+[2024-06-23T01:20:05.960+0000] {process_utils.py:191} INFO -     150  cloyster             839.234
+[2024-06-23T01:20:05.960+0000] {process_utils.py:191} INFO -     151  gastly               199.601
+[2024-06-23T01:20:05.961+0000] {process_utils.py:191} INFO -     152  haunter              199.601
+[2024-06-23T01:20:05.961+0000] {process_utils.py:191} INFO -     153  gengar               199.601
+[2024-06-23T01:20:05.961+0000] {process_utils.py:191} INFO -     154  onix                2681.25
+[2024-06-23T01:20:05.962+0000] {process_utils.py:191} INFO -     155  drowzee              199.601
+[2024-06-23T01:20:05.962+0000] {process_utils.py:191} INFO -     156  hypno                839.234
+[2024-06-23T01:20:05.962+0000] {process_utils.py:191} INFO -     157  krabby               199.601
+[2024-06-23T01:20:05.963+0000] {process_utils.py:191} INFO -     158  kingler              839.234
+[2024-06-23T01:20:05.963+0000] {process_utils.py:191} INFO -     159  voltorb              199.601
+[2024-06-23T01:20:05.963+0000] {process_utils.py:191} INFO -     160  electrode            839.234
+[2024-06-23T01:20:05.964+0000] {process_utils.py:191} INFO -     161  exeggcute            199.601
+[2024-06-23T01:20:05.964+0000] {process_utils.py:191} INFO -     162  exeggutor            839.234
+[2024-06-23T01:20:05.964+0000] {process_utils.py:191} INFO -     163  cubone               199.601
+[2024-06-23T01:20:05.965+0000] {process_utils.py:191} INFO -     164  marowak              199.601
+[2024-06-23T01:20:05.965+0000] {process_utils.py:191} INFO -     165  hitmonlee            199.601
+[2024-06-23T01:20:05.965+0000] {process_utils.py:191} INFO -     166  hitmonchan           199.601
+[2024-06-23T01:20:05.965+0000] {process_utils.py:191} INFO -     167  lickitung            839.234
+[2024-06-23T01:20:05.966+0000] {process_utils.py:191} INFO -     168  koffing              199.601
+[2024-06-23T01:20:05.966+0000] {process_utils.py:191} INFO -     169  weezing              199.601
+[2024-06-23T01:20:05.966+0000] {process_utils.py:191} INFO -     170  rhyhorn              839.234
+[2024-06-23T01:20:05.966+0000] {process_utils.py:191} INFO -     171  rhydon               839.234
+[2024-06-23T01:20:05.966+0000] {process_utils.py:191} INFO -     172  chansey              199.601
+[2024-06-23T01:20:05.967+0000] {process_utils.py:191} INFO -     173  tangela              199.601
+[2024-06-23T01:20:05.967+0000] {process_utils.py:191} INFO -     174  kangaskhan           839.234
+[2024-06-23T01:20:05.967+0000] {process_utils.py:191} INFO -     175  horsea               199.601
+[2024-06-23T01:20:05.967+0000] {process_utils.py:191} INFO -     176  seadra               199.601
+[2024-06-23T01:20:05.967+0000] {process_utils.py:191} INFO -     177  goldeen              199.601
+[2024-06-23T01:20:05.968+0000] {process_utils.py:191} INFO -     178  seaking              199.601
+[2024-06-23T01:20:05.968+0000] {process_utils.py:191} INFO -     179  staryu               199.601
+[2024-06-23T01:20:05.968+0000] {process_utils.py:191} INFO -     180  starmie              839.234
+[2024-06-23T01:20:05.969+0000] {process_utils.py:191} INFO -     181  mr-mime              839.234
+[2024-06-23T01:20:05.969+0000] {process_utils.py:191} INFO -     182  scyther              839.234
+[2024-06-23T01:20:05.969+0000] {process_utils.py:191} INFO -     183  jynx                 199.601
+[2024-06-23T01:20:05.970+0000] {process_utils.py:191} INFO -     184  electabuzz           199.601
+[2024-06-23T01:20:05.970+0000] {process_utils.py:191} INFO -     185  magmar               199.601
+[2024-06-23T01:20:05.970+0000] {process_utils.py:191} INFO -     186  pinsir               839.234
+[2024-06-23T01:20:05.971+0000] {process_utils.py:191} INFO -     187  tauros               839.234
+[2024-06-23T01:20:05.971+0000] {process_utils.py:191} INFO -     188  magikarp             199.601
+[2024-06-23T01:20:05.971+0000] {process_utils.py:191} INFO -     189  gyarados            2681.25
+[2024-06-23T01:20:05.972+0000] {process_utils.py:191} INFO -     190  lapras              2681.25
+[2024-06-23T01:20:05.972+0000] {process_utils.py:191} INFO -     191  ditto                199.601
+[2024-06-23T01:20:05.972+0000] {process_utils.py:191} INFO -     192  eevee                199.601
+[2024-06-23T01:20:05.973+0000] {process_utils.py:191} INFO -     193  vaporeon             199.601
+[2024-06-23T01:20:05.973+0000] {process_utils.py:191} INFO -     194  jolteon              199.601
+[2024-06-23T01:20:05.973+0000] {process_utils.py:191} INFO -     195  flareon              199.601
+[2024-06-23T01:20:05.974+0000] {process_utils.py:191} INFO -     196  porygon              199.601
+[2024-06-23T01:20:05.974+0000] {process_utils.py:191} INFO -     197  omanyte              199.601
+[2024-06-23T01:20:05.974+0000] {process_utils.py:191} INFO -     198  omastar              199.601
+[2024-06-23T01:20:05.975+0000] {process_utils.py:191} INFO -     199  kabuto               199.601
+[2024-06-23T01:20:05.975+0000] {process_utils.py:191} INFO -     200  kabutops             199.601
+[2024-06-23T01:20:05.975+0000] {process_utils.py:191} INFO -     201  aerodactyl           839.234
+[2024-06-23T01:20:05.976+0000] {process_utils.py:191} INFO -     202  snorlax             2681.25
+[2024-06-23T01:20:05.976+0000] {process_utils.py:191} INFO -     203  articuno             839.234
+[2024-06-23T01:20:05.976+0000] {process_utils.py:191} INFO -     204  zapdos               839.234
+[2024-06-23T01:20:05.977+0000] {process_utils.py:191} INFO -     205  moltres              839.234
+[2024-06-23T01:20:05.977+0000] {process_utils.py:191} INFO -     206  dratini              199.601
+[2024-06-23T01:20:05.977+0000] {process_utils.py:191} INFO -     207  dragonair            199.601
+[2024-06-23T01:20:05.978+0000] {process_utils.py:191} INFO -     208  dragonite           2681.25
+[2024-06-23T01:20:05.978+0000] {process_utils.py:191} INFO -     209  mewtwo               839.234
+[2024-06-23T01:20:05.978+0000] {process_utils.py:191} INFO -     210  mew                  199.601
+[2024-06-23T01:20:05.979+0000] {process_utils.py:191} INFO -     211  chikorita            199.601
+[2024-06-23T01:20:05.979+0000] {process_utils.py:191} INFO -     212  bayleef              199.601
+[2024-06-23T01:20:05.979+0000] {process_utils.py:191} INFO -     213  meganium             839.234
+[2024-06-23T01:20:05.980+0000] {process_utils.py:191} INFO -     214  cyndaquil            199.601
+[2024-06-23T01:20:05.980+0000] {process_utils.py:191} INFO -     215  quilava              199.601
+[2024-06-23T01:20:05.980+0000] {process_utils.py:191} INFO -     216  typhlosion           839.234
+[2024-06-23T01:20:05.981+0000] {process_utils.py:191} INFO -     217  totodile             199.601
+[2024-06-23T01:20:05.981+0000] {process_utils.py:191} INFO -     218  croconaw             199.601
+[2024-06-23T01:20:05.981+0000] {process_utils.py:191} INFO -     219  feraligatr           839.234
+[2024-06-23T01:20:06.082+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-06-23T01:20:06.082+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-23T01:20:06.090+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=pokemon_example, task_id=metricspokemonweights, run_id=manual__2024-06-23T01:18:25.665789+00:00, execution_date=20240623T011825, start_date=20240623T011957, end_date=20240623T012006
+[2024-06-23T01:20:06.126+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-23T01:20:06.143+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-23T01:20:06.146+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

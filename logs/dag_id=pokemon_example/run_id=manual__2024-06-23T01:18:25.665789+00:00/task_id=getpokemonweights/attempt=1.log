@@ -1,0 +1,259 @@
+[2024-06-23T01:18:40.417+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-23T01:18:40.438+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pokemon_example.getpokemonweights manual__2024-06-23T01:18:25.665789+00:00 [queued]>
+[2024-06-23T01:18:40.446+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pokemon_example.getpokemonweights manual__2024-06-23T01:18:25.665789+00:00 [queued]>
+[2024-06-23T01:18:40.446+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-06-23T01:18:40.462+0000] {taskinstance.py:2330} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): getpokemonweights> on 2024-06-23 01:18:25.665789+00:00
+[2024-06-23T01:18:40.468+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=7162) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-06-23T01:18:40.469+0000] {standard_task_runner.py:63} INFO - Started process 7163 to run task
+[2024-06-23T01:18:40.470+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'pokemon_example', 'getpokemonweights', 'manual__2024-06-23T01:18:25.665789+00:00', '--job-id', '95', '--raw', '--subdir', 'DAGS_FOLDER/python_operators.py', '--cfg-path', '/tmp/tmpn3wp54jx']
+[2024-06-23T01:18:40.471+0000] {standard_task_runner.py:91} INFO - Job 95: Subtask getpokemonweights
+[2024-06-23T01:18:40.516+0000] {task_command.py:426} INFO - Running <TaskInstance: pokemon_example.getpokemonweights manual__2024-06-23T01:18:25.665789+00:00 [running]> on host c357804a93ab
+[2024-06-23T01:18:40.607+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pokemon_example' AIRFLOW_CTX_TASK_ID='getpokemonweights' AIRFLOW_CTX_EXECUTION_DATE='2024-06-23T01:18:25.665789+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-23T01:18:25.665789+00:00'
+[2024-06-23T01:18:40.608+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-23T01:18:40.610+0000] {process_utils.py:183} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venvg5pgw4mo --system-site-packages --python=python
+[2024-06-23T01:18:40.610+0000] {process_utils.py:187} INFO - Output:
+[2024-06-23T01:18:41.320+0000] {process_utils.py:191} INFO - created virtual environment CPython3.12.3.final.0-64 in 234ms
+[2024-06-23T01:18:41.320+0000] {process_utils.py:191} INFO -   creator CPython3Posix(dest=/tmp/venvg5pgw4mo, clear=False, no_vcs_ignore=False, global=True)
+[2024-06-23T01:18:41.321+0000] {process_utils.py:191} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-06-23T01:18:41.321+0000] {process_utils.py:191} INFO -     added seed packages: pip==24.0
+[2024-06-23T01:18:41.322+0000] {process_utils.py:191} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-06-23T01:18:41.342+0000] {process_utils.py:183} INFO - Executing cmd: /tmp/venvg5pgw4mo/bin/pip install -r /tmp/venvg5pgw4mo/requirements.txt
+[2024-06-23T01:18:41.343+0000] {process_utils.py:187} INFO - Output:
+[2024-06-23T01:18:43.426+0000] {process_utils.py:191} INFO - Requirement already satisfied: requests in /home/***/.local/lib/python3.12/site-packages (from -r /tmp/venvg5pgw4mo/requirements.txt (line 1)) (2.31.0)
+[2024-06-23T01:18:43.437+0000] {process_utils.py:191} INFO - Requirement already satisfied: charset-normalizer<4,>=2 in /home/***/.local/lib/python3.12/site-packages (from requests->-r /tmp/venvg5pgw4mo/requirements.txt (line 1)) (3.3.2)
+[2024-06-23T01:18:43.440+0000] {process_utils.py:191} INFO - Requirement already satisfied: idna<4,>=2.5 in /home/***/.local/lib/python3.12/site-packages (from requests->-r /tmp/venvg5pgw4mo/requirements.txt (line 1)) (3.7)
+[2024-06-23T01:18:43.441+0000] {process_utils.py:191} INFO - Requirement already satisfied: urllib3<3,>=1.21.1 in /home/***/.local/lib/python3.12/site-packages (from requests->-r /tmp/venvg5pgw4mo/requirements.txt (line 1)) (2.2.1)
+[2024-06-23T01:18:43.443+0000] {process_utils.py:191} INFO - Requirement already satisfied: certifi>=2017.4.17 in /home/***/.local/lib/python3.12/site-packages (from requests->-r /tmp/venvg5pgw4mo/requirements.txt (line 1)) (2024.2.2)
+[2024-06-23T01:18:46.455+0000] {process_utils.py:191} INFO - 
+[2024-06-23T01:18:46.455+0000] {process_utils.py:191} INFO - [notice] A new release of pip is available: 24.0 -> 24.1
+[2024-06-23T01:18:46.456+0000] {process_utils.py:191} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2024-06-23T01:18:46.598+0000] {process_utils.py:183} INFO - Executing cmd: /tmp/venvg5pgw4mo/bin/python /tmp/venv-calld1y6t8zu/script.py /tmp/venv-calld1y6t8zu/script.in /tmp/venv-calld1y6t8zu/script.out /tmp/venv-calld1y6t8zu/string_args.txt /tmp/venv-calld1y6t8zu/termination.log
+[2024-06-23T01:18:46.599+0000] {process_utils.py:187} INFO - Output:
+[2024-06-23T01:19:38.844+0000] {process_utils.py:191} INFO - getting: bulbasaur
+[2024-06-23T01:19:38.845+0000] {process_utils.py:191} INFO - getting: ivysaur
+[2024-06-23T01:19:38.845+0000] {process_utils.py:191} INFO - getting: venusaur
+[2024-06-23T01:19:38.846+0000] {process_utils.py:191} INFO - getting: charmander
+[2024-06-23T01:19:38.846+0000] {process_utils.py:191} INFO - getting: charmeleon
+[2024-06-23T01:19:38.847+0000] {process_utils.py:191} INFO - getting: charizard
+[2024-06-23T01:19:38.847+0000] {process_utils.py:191} INFO - getting: squirtle
+[2024-06-23T01:19:38.848+0000] {process_utils.py:191} INFO - getting: wartortle
+[2024-06-23T01:19:38.848+0000] {process_utils.py:191} INFO - getting: blastoise
+[2024-06-23T01:19:38.849+0000] {process_utils.py:191} INFO - getting: caterpie
+[2024-06-23T01:19:38.849+0000] {process_utils.py:191} INFO - getting: metapod
+[2024-06-23T01:19:38.850+0000] {process_utils.py:191} INFO - getting: butterfree
+[2024-06-23T01:19:38.850+0000] {process_utils.py:191} INFO - getting: weedle
+[2024-06-23T01:19:38.851+0000] {process_utils.py:191} INFO - getting: kakuna
+[2024-06-23T01:19:38.852+0000] {process_utils.py:191} INFO - getting: beedrill
+[2024-06-23T01:19:38.852+0000] {process_utils.py:191} INFO - getting: pidgey
+[2024-06-23T01:19:38.853+0000] {process_utils.py:191} INFO - getting: pidgeotto
+[2024-06-23T01:19:38.853+0000] {process_utils.py:191} INFO - getting: pidgeot
+[2024-06-23T01:19:38.854+0000] {process_utils.py:191} INFO - getting: rattata
+[2024-06-23T01:19:38.854+0000] {process_utils.py:191} INFO - getting: raticate
+[2024-06-23T01:19:38.855+0000] {process_utils.py:191} INFO - getting: spearow
+[2024-06-23T01:19:38.856+0000] {process_utils.py:191} INFO - getting: fearow
+[2024-06-23T01:19:38.856+0000] {process_utils.py:191} INFO - getting: ekans
+[2024-06-23T01:19:38.857+0000] {process_utils.py:191} INFO - getting: arbok
+[2024-06-23T01:19:38.857+0000] {process_utils.py:191} INFO - getting: pikachu
+[2024-06-23T01:19:38.858+0000] {process_utils.py:191} INFO - getting: raichu
+[2024-06-23T01:19:38.859+0000] {process_utils.py:191} INFO - getting: sandshrew
+[2024-06-23T01:19:38.859+0000] {process_utils.py:191} INFO - getting: sandslash
+[2024-06-23T01:19:38.860+0000] {process_utils.py:191} INFO - getting: nidoran-f
+[2024-06-23T01:19:38.860+0000] {process_utils.py:191} INFO - getting: nidorina
+[2024-06-23T01:19:38.861+0000] {process_utils.py:191} INFO - getting: nidoqueen
+[2024-06-23T01:19:38.862+0000] {process_utils.py:191} INFO - getting: nidoran-m
+[2024-06-23T01:19:38.862+0000] {process_utils.py:191} INFO - getting: nidorino
+[2024-06-23T01:19:38.863+0000] {process_utils.py:191} INFO - getting: nidoking
+[2024-06-23T01:19:38.863+0000] {process_utils.py:191} INFO - getting: clefairy
+[2024-06-23T01:19:38.864+0000] {process_utils.py:191} INFO - getting: clefable
+[2024-06-23T01:19:38.864+0000] {process_utils.py:191} INFO - getting: vulpix
+[2024-06-23T01:19:38.865+0000] {process_utils.py:191} INFO - getting: ninetales
+[2024-06-23T01:19:38.866+0000] {process_utils.py:191} INFO - getting: jigglypuff
+[2024-06-23T01:19:38.866+0000] {process_utils.py:191} INFO - getting: wigglytuff
+[2024-06-23T01:19:38.867+0000] {process_utils.py:191} INFO - getting: zubat
+[2024-06-23T01:19:38.867+0000] {process_utils.py:191} INFO - getting: golbat
+[2024-06-23T01:19:38.868+0000] {process_utils.py:191} INFO - getting: oddish
+[2024-06-23T01:19:38.868+0000] {process_utils.py:191} INFO - getting: gloom
+[2024-06-23T01:19:38.869+0000] {process_utils.py:191} INFO - getting: vileplume
+[2024-06-23T01:19:38.869+0000] {process_utils.py:191} INFO - getting: paras
+[2024-06-23T01:19:38.870+0000] {process_utils.py:191} INFO - getting: parasect
+[2024-06-23T01:19:38.870+0000] {process_utils.py:191} INFO - getting: venonat
+[2024-06-23T01:19:38.871+0000] {process_utils.py:191} INFO - getting: venomoth
+[2024-06-23T01:19:38.871+0000] {process_utils.py:191} INFO - getting: diglett
+[2024-06-23T01:19:38.872+0000] {process_utils.py:191} INFO - getting: dugtrio
+[2024-06-23T01:19:38.872+0000] {process_utils.py:191} INFO - getting: meowth
+[2024-06-23T01:19:38.873+0000] {process_utils.py:191} INFO - getting: persian
+[2024-06-23T01:19:38.873+0000] {process_utils.py:191} INFO - getting: psyduck
+[2024-06-23T01:19:38.873+0000] {process_utils.py:191} INFO - getting: golduck
+[2024-06-23T01:19:38.874+0000] {process_utils.py:191} INFO - getting: mankey
+[2024-06-23T01:19:38.874+0000] {process_utils.py:191} INFO - getting: primeape
+[2024-06-23T01:19:38.875+0000] {process_utils.py:191} INFO - getting: growlithe
+[2024-06-23T01:19:38.875+0000] {process_utils.py:191} INFO - getting: arcanine
+[2024-06-23T01:19:38.875+0000] {process_utils.py:191} INFO - getting: poliwag
+[2024-06-23T01:19:38.876+0000] {process_utils.py:191} INFO - getting: poliwhirl
+[2024-06-23T01:19:38.876+0000] {process_utils.py:191} INFO - getting: poliwrath
+[2024-06-23T01:19:38.877+0000] {process_utils.py:191} INFO - getting: abra
+[2024-06-23T01:19:38.877+0000] {process_utils.py:191} INFO - getting: kadabra
+[2024-06-23T01:19:38.877+0000] {process_utils.py:191} INFO - getting: alakazam
+[2024-06-23T01:19:38.878+0000] {process_utils.py:191} INFO - getting: machop
+[2024-06-23T01:19:38.878+0000] {process_utils.py:191} INFO - getting: machoke
+[2024-06-23T01:19:38.878+0000] {process_utils.py:191} INFO - getting: machamp
+[2024-06-23T01:19:38.879+0000] {process_utils.py:191} INFO - getting: bellsprout
+[2024-06-23T01:19:38.879+0000] {process_utils.py:191} INFO - getting: weepinbell
+[2024-06-23T01:19:38.879+0000] {process_utils.py:191} INFO - getting: victreebel
+[2024-06-23T01:19:38.880+0000] {process_utils.py:191} INFO - getting: tentacool
+[2024-06-23T01:19:38.880+0000] {process_utils.py:191} INFO - getting: tentacruel
+[2024-06-23T01:19:38.881+0000] {process_utils.py:191} INFO - getting: geodude
+[2024-06-23T01:19:38.881+0000] {process_utils.py:191} INFO - getting: graveler
+[2024-06-23T01:19:38.881+0000] {process_utils.py:191} INFO - getting: golem
+[2024-06-23T01:19:38.882+0000] {process_utils.py:191} INFO - getting: ponyta
+[2024-06-23T01:19:38.882+0000] {process_utils.py:191} INFO - getting: rapidash
+[2024-06-23T01:19:38.882+0000] {process_utils.py:191} INFO - getting: slowpoke
+[2024-06-23T01:19:38.883+0000] {process_utils.py:191} INFO - getting: slowbro
+[2024-06-23T01:19:38.883+0000] {process_utils.py:191} INFO - getting: poliwhirl
+[2024-06-23T01:19:38.883+0000] {process_utils.py:191} INFO - getting: poliwrath
+[2024-06-23T01:19:38.883+0000] {process_utils.py:191} INFO - getting: abra
+[2024-06-23T01:19:38.884+0000] {process_utils.py:191} INFO - getting: kadabra
+[2024-06-23T01:19:38.884+0000] {process_utils.py:191} INFO - getting: alakazam
+[2024-06-23T01:19:38.884+0000] {process_utils.py:191} INFO - getting: machop
+[2024-06-23T01:19:38.885+0000] {process_utils.py:191} INFO - getting: machoke
+[2024-06-23T01:19:38.885+0000] {process_utils.py:191} INFO - getting: machamp
+[2024-06-23T01:19:38.885+0000] {process_utils.py:191} INFO - getting: bellsprout
+[2024-06-23T01:19:38.886+0000] {process_utils.py:191} INFO - getting: weepinbell
+[2024-06-23T01:19:38.886+0000] {process_utils.py:191} INFO - getting: victreebel
+[2024-06-23T01:19:38.886+0000] {process_utils.py:191} INFO - getting: tentacool
+[2024-06-23T01:19:38.887+0000] {process_utils.py:191} INFO - getting: tentacruel
+[2024-06-23T01:19:38.887+0000] {process_utils.py:191} INFO - getting: geodude
+[2024-06-23T01:19:38.887+0000] {process_utils.py:191} INFO - getting: graveler
+[2024-06-23T01:19:38.887+0000] {process_utils.py:191} INFO - getting: golem
+[2024-06-23T01:19:38.888+0000] {process_utils.py:191} INFO - getting: ponyta
+[2024-06-23T01:19:38.888+0000] {process_utils.py:191} INFO - getting: rapidash
+[2024-06-23T01:19:38.888+0000] {process_utils.py:191} INFO - getting: slowpoke
+[2024-06-23T01:19:38.889+0000] {process_utils.py:191} INFO - getting: slowbro
+[2024-06-23T01:19:38.889+0000] {process_utils.py:191} INFO - getting: magnemite
+[2024-06-23T01:19:38.889+0000] {process_utils.py:191} INFO - getting: magneton
+[2024-06-23T01:19:38.889+0000] {process_utils.py:191} INFO - getting: farfetchd
+[2024-06-23T01:19:38.890+0000] {process_utils.py:191} INFO - getting: doduo
+[2024-06-23T01:19:38.890+0000] {process_utils.py:191} INFO - getting: dodrio
+[2024-06-23T01:19:38.890+0000] {process_utils.py:191} INFO - getting: seel
+[2024-06-23T01:19:38.891+0000] {process_utils.py:191} INFO - getting: dewgong
+[2024-06-23T01:19:38.891+0000] {process_utils.py:191} INFO - getting: grimer
+[2024-06-23T01:19:38.891+0000] {process_utils.py:191} INFO - getting: muk
+[2024-06-23T01:19:38.891+0000] {process_utils.py:191} INFO - getting: shellder
+[2024-06-23T01:19:38.892+0000] {process_utils.py:191} INFO - getting: cloyster
+[2024-06-23T01:19:38.892+0000] {process_utils.py:191} INFO - getting: gastly
+[2024-06-23T01:19:38.892+0000] {process_utils.py:191} INFO - getting: haunter
+[2024-06-23T01:19:38.893+0000] {process_utils.py:191} INFO - getting: gengar
+[2024-06-23T01:19:38.893+0000] {process_utils.py:191} INFO - getting: onix
+[2024-06-23T01:19:38.893+0000] {process_utils.py:191} INFO - getting: drowzee
+[2024-06-23T01:19:38.894+0000] {process_utils.py:191} INFO - getting: hypno
+[2024-06-23T01:19:38.894+0000] {process_utils.py:191} INFO - getting: krabby
+[2024-06-23T01:19:38.894+0000] {process_utils.py:191} INFO - getting: kingler
+[2024-06-23T01:19:38.894+0000] {process_utils.py:191} INFO - getting: voltorb
+[2024-06-23T01:19:38.895+0000] {process_utils.py:191} INFO - getting: electrode
+[2024-06-23T01:19:38.895+0000] {process_utils.py:191} INFO - getting: exeggcute
+[2024-06-23T01:19:38.895+0000] {process_utils.py:191} INFO - getting: exeggutor
+[2024-06-23T01:19:38.896+0000] {process_utils.py:191} INFO - getting: cubone
+[2024-06-23T01:19:38.896+0000] {process_utils.py:191} INFO - getting: marowak
+[2024-06-23T01:19:38.896+0000] {process_utils.py:191} INFO - getting: hitmonlee
+[2024-06-23T01:19:38.896+0000] {process_utils.py:191} INFO - getting: hitmonchan
+[2024-06-23T01:19:38.897+0000] {process_utils.py:191} INFO - getting: lickitung
+[2024-06-23T01:19:38.897+0000] {process_utils.py:191} INFO - getting: koffing
+[2024-06-23T01:19:38.897+0000] {process_utils.py:191} INFO - getting: weezing
+[2024-06-23T01:19:38.897+0000] {process_utils.py:191} INFO - getting: rhyhorn
+[2024-06-23T01:19:38.897+0000] {process_utils.py:191} INFO - getting: rhydon
+[2024-06-23T01:19:38.898+0000] {process_utils.py:191} INFO - getting: chansey
+[2024-06-23T01:19:38.898+0000] {process_utils.py:191} INFO - getting: tangela
+[2024-06-23T01:19:38.898+0000] {process_utils.py:191} INFO - getting: kangaskhan
+[2024-06-23T01:19:38.898+0000] {process_utils.py:191} INFO - getting: horsea
+[2024-06-23T01:19:38.898+0000] {process_utils.py:191} INFO - getting: seadra
+[2024-06-23T01:19:38.899+0000] {process_utils.py:191} INFO - getting: goldeen
+[2024-06-23T01:19:38.899+0000] {process_utils.py:191} INFO - getting: seaking
+[2024-06-23T01:19:38.899+0000] {process_utils.py:191} INFO - getting: staryu
+[2024-06-23T01:19:38.899+0000] {process_utils.py:191} INFO - getting: magnemite
+[2024-06-23T01:19:38.899+0000] {process_utils.py:191} INFO - getting: magneton
+[2024-06-23T01:19:38.899+0000] {process_utils.py:191} INFO - getting: farfetchd
+[2024-06-23T01:19:38.900+0000] {process_utils.py:191} INFO - getting: doduo
+[2024-06-23T01:19:38.900+0000] {process_utils.py:191} INFO - getting: dodrio
+[2024-06-23T01:19:38.900+0000] {process_utils.py:191} INFO - getting: seel
+[2024-06-23T01:19:38.900+0000] {process_utils.py:191} INFO - getting: dewgong
+[2024-06-23T01:19:38.900+0000] {process_utils.py:191} INFO - getting: grimer
+[2024-06-23T01:19:38.901+0000] {process_utils.py:191} INFO - getting: muk
+[2024-06-23T01:19:38.901+0000] {process_utils.py:191} INFO - getting: shellder
+[2024-06-23T01:19:38.901+0000] {process_utils.py:191} INFO - getting: cloyster
+[2024-06-23T01:19:38.901+0000] {process_utils.py:191} INFO - getting: gastly
+[2024-06-23T01:19:38.901+0000] {process_utils.py:191} INFO - getting: haunter
+[2024-06-23T01:19:38.902+0000] {process_utils.py:191} INFO - getting: gengar
+[2024-06-23T01:19:38.902+0000] {process_utils.py:191} INFO - getting: onix
+[2024-06-23T01:19:38.902+0000] {process_utils.py:191} INFO - getting: drowzee
+[2024-06-23T01:19:38.902+0000] {process_utils.py:191} INFO - getting: hypno
+[2024-06-23T01:19:38.902+0000] {process_utils.py:191} INFO - getting: krabby
+[2024-06-23T01:19:38.902+0000] {process_utils.py:191} INFO - getting: kingler
+[2024-06-23T01:19:38.903+0000] {process_utils.py:191} INFO - getting: voltorb
+[2024-06-23T01:19:38.903+0000] {process_utils.py:191} INFO - getting: electrode
+[2024-06-23T01:19:38.903+0000] {process_utils.py:191} INFO - getting: exeggcute
+[2024-06-23T01:19:38.903+0000] {process_utils.py:191} INFO - getting: exeggutor
+[2024-06-23T01:19:38.903+0000] {process_utils.py:191} INFO - getting: cubone
+[2024-06-23T01:19:38.904+0000] {process_utils.py:191} INFO - getting: marowak
+[2024-06-23T01:19:38.904+0000] {process_utils.py:191} INFO - getting: hitmonlee
+[2024-06-23T01:19:38.904+0000] {process_utils.py:191} INFO - getting: hitmonchan
+[2024-06-23T01:19:38.904+0000] {process_utils.py:191} INFO - getting: lickitung
+[2024-06-23T01:19:38.904+0000] {process_utils.py:191} INFO - getting: koffing
+[2024-06-23T01:19:38.905+0000] {process_utils.py:191} INFO - getting: weezing
+[2024-06-23T01:19:38.905+0000] {process_utils.py:191} INFO - getting: rhyhorn
+[2024-06-23T01:19:38.905+0000] {process_utils.py:191} INFO - getting: rhydon
+[2024-06-23T01:19:38.905+0000] {process_utils.py:191} INFO - getting: chansey
+[2024-06-23T01:19:38.905+0000] {process_utils.py:191} INFO - getting: tangela
+[2024-06-23T01:19:38.905+0000] {process_utils.py:191} INFO - getting: kangaskhan
+[2024-06-23T01:19:38.906+0000] {process_utils.py:191} INFO - getting: horsea
+[2024-06-23T01:19:38.906+0000] {process_utils.py:191} INFO - getting: seadra
+[2024-06-23T01:19:38.906+0000] {process_utils.py:191} INFO - getting: goldeen
+[2024-06-23T01:19:38.906+0000] {process_utils.py:191} INFO - getting: seaking
+[2024-06-23T01:19:38.906+0000] {process_utils.py:191} INFO - getting: staryu
+[2024-06-23T01:19:38.906+0000] {process_utils.py:191} INFO - getting: starmie
+[2024-06-23T01:19:38.907+0000] {process_utils.py:191} INFO - getting: mr-mime
+[2024-06-23T01:19:38.907+0000] {process_utils.py:191} INFO - getting: scyther
+[2024-06-23T01:19:38.907+0000] {process_utils.py:191} INFO - getting: jynx
+[2024-06-23T01:19:38.907+0000] {process_utils.py:191} INFO - getting: electabuzz
+[2024-06-23T01:19:38.907+0000] {process_utils.py:191} INFO - getting: magmar
+[2024-06-23T01:19:38.908+0000] {process_utils.py:191} INFO - getting: pinsir
+[2024-06-23T01:19:38.908+0000] {process_utils.py:191} INFO - getting: tauros
+[2024-06-23T01:19:38.908+0000] {process_utils.py:191} INFO - getting: magikarp
+[2024-06-23T01:19:38.908+0000] {process_utils.py:191} INFO - getting: gyarados
+[2024-06-23T01:19:38.908+0000] {process_utils.py:191} INFO - getting: lapras
+[2024-06-23T01:19:38.909+0000] {process_utils.py:191} INFO - getting: ditto
+[2024-06-23T01:19:38.909+0000] {process_utils.py:191} INFO - getting: eevee
+[2024-06-23T01:19:38.909+0000] {process_utils.py:191} INFO - getting: vaporeon
+[2024-06-23T01:19:38.909+0000] {process_utils.py:191} INFO - getting: jolteon
+[2024-06-23T01:19:38.909+0000] {process_utils.py:191} INFO - getting: flareon
+[2024-06-23T01:19:38.909+0000] {process_utils.py:191} INFO - getting: porygon
+[2024-06-23T01:19:38.910+0000] {process_utils.py:191} INFO - getting: omanyte
+[2024-06-23T01:19:38.910+0000] {process_utils.py:191} INFO - getting: omastar
+[2024-06-23T01:19:38.910+0000] {process_utils.py:191} INFO - getting: kabuto
+[2024-06-23T01:19:38.910+0000] {process_utils.py:191} INFO - getting: kabutops
+[2024-06-23T01:19:38.910+0000] {process_utils.py:191} INFO - getting: aerodactyl
+[2024-06-23T01:19:38.910+0000] {process_utils.py:191} INFO - getting: snorlax
+[2024-06-23T01:19:38.911+0000] {process_utils.py:191} INFO - getting: articuno
+[2024-06-23T01:19:38.911+0000] {process_utils.py:191} INFO - getting: zapdos
+[2024-06-23T01:19:38.911+0000] {process_utils.py:191} INFO - getting: moltres
+[2024-06-23T01:19:38.911+0000] {process_utils.py:191} INFO - getting: dratini
+[2024-06-23T01:19:38.911+0000] {process_utils.py:191} INFO - getting: dragonair
+[2024-06-23T01:19:38.912+0000] {process_utils.py:191} INFO - getting: dragonite
+[2024-06-23T01:19:38.912+0000] {process_utils.py:191} INFO - getting: mewtwo
+[2024-06-23T01:19:38.912+0000] {process_utils.py:191} INFO - getting: mew
+[2024-06-23T01:19:38.912+0000] {process_utils.py:191} INFO - getting: chikorita
+[2024-06-23T01:19:38.912+0000] {process_utils.py:191} INFO - getting: bayleef
+[2024-06-23T01:19:38.912+0000] {process_utils.py:191} INFO - getting: meganium
+[2024-06-23T01:19:38.913+0000] {process_utils.py:191} INFO - getting: cyndaquil
+[2024-06-23T01:19:38.913+0000] {process_utils.py:191} INFO - getting: quilava
+[2024-06-23T01:19:38.913+0000] {process_utils.py:191} INFO - getting: typhlosion
+[2024-06-23T01:19:38.913+0000] {process_utils.py:191} INFO - getting: totodile
+[2024-06-23T01:19:38.913+0000] {process_utils.py:191} INFO - getting: croconaw
+[2024-06-23T01:19:38.914+0000] {process_utils.py:191} INFO - getting: feraligatr
+[2024-06-23T01:19:39.122+0000] {python.py:237} INFO - Done. Returned value was: [{'name': 'bulbasaur', 'url': 'https://pokeapi.co/api/v2/pokemon/1/', 'weight': 69}, {'name': 'ivysaur', 'url': 'https://pokeapi.co/api/v2/pokemon/2/', 'weight': 130}, {'name': 'venusaur', 'url': 'https://pokeapi.co/api/v2/pokemon/3/', 'weight': 1000}, {'name': 'charmander', 'url': 'https://pokeapi.co/api/v2/pokemon/4/', 'weight': 85}, {'name': 'charmeleon', 'url': 'https://pokeapi.co/api/v2/pokemon/5/', 'weight': 190}, {'name': 'charizard', 'url': 'https://pokeapi.co/api/v2/pokemon/6/', 'weight': 905}, {'name': 'squirtle', 'url': 'https://pokeapi.co/api/v2/pokemon/7/', 'weight': 90}, {'name': 'wartortle', 'url': 'https://pokeapi.co/api/v2/pokemon/8/', 'weight': 225}, {'name': 'blastoise', 'url': 'https://pokeapi.co/api/v2/pokemon/9/', 'weight': 855}, {'name': 'caterpie', 'url': 'https://pokeapi.co/api/v2/pokemon/10/', 'weight': 29}, {'name': 'metapod', 'url': 'https://pokeapi.co/api/v2/pokemon/11/', 'weight': 99}, {'name': 'butterfree', 'url': 'https://pokeapi.co/api/v2/pokemon/12/', 'weight': 320}, {'name': 'weedle', 'url': 'https://pokeapi.co/api/v2/pokemon/13/', 'weight': 32}, {'name': 'kakuna', 'url': 'https://pokeapi.co/api/v2/pokemon/14/', 'weight': 100}, {'name': 'beedrill', 'url': 'https://pokeapi.co/api/v2/pokemon/15/', 'weight': 295}, {'name': 'pidgey', 'url': 'https://pokeapi.co/api/v2/pokemon/16/', 'weight': 18}, {'name': 'pidgeotto', 'url': 'https://pokeapi.co/api/v2/pokemon/17/', 'weight': 300}, {'name': 'pidgeot', 'url': 'https://pokeapi.co/api/v2/pokemon/18/', 'weight': 395}, {'name': 'rattata', 'url': 'https://pokeapi.co/api/v2/pokemon/19/', 'weight': 35}, {'name': 'raticate', 'url': 'https://pokeapi.co/api/v2/pokemon/20/', 'weight': 185}, {'name': 'spearow', 'url': 'https://pokeapi.co/api/v2/pokemon/21/', 'weight': 20}, {'name': 'fearow', 'url': 'https://pokeapi.co/api/v2/pokemon/22/', 'weight': 380}, {'name': 'ekans', 'url': 'https://pokeapi.co/api/v2/pokemon/23/', 'weight': 69}, {'name': 'arbok', 'url': 'https://pokeapi.co/api/v2/pokemon/24/', 'weight': 650}, {'name': 'pikachu', 'url': 'https://pokeapi.co/api/v2/pokemon/25/', 'weight': 60}, {'name': 'raichu', 'url': 'https://pokeapi.co/api/v2/pokemon/26/', 'weight': 300}, {'name': 'sandshrew', 'url': 'https://pokeapi.co/api/v2/pokemon/27/', 'weight': 120}, {'name': 'sandslash', 'url': 'https://pokeapi.co/api/v2/pokemon/28/', 'weight': 295}, {'name': 'nidoran-f', 'url': 'https://pokeapi.co/api/v2/pokemon/29/', 'weight': 70}, {'name': 'nidorina', 'url': 'https://pokeapi.co/api/v2/pokemon/30/', 'weight': 200}, {'name': 'nidoqueen', 'url': 'https://pokeapi.co/api/v2/pokemon/31/', 'weight': 600}, {'name': 'nidoran-m', 'url': 'https://pokeapi.co/api/v2/pokemon/32/', 'weight': 90}, {'name': 'nidorino', 'url': 'https://pokeapi.co/api/v2/pokemon/33/', 'weight': 195}, {'name': 'nidoking', 'url': 'https://pokeapi.co/api/v2/pokemon/34/', 'weight': 620}, {'name': 'clefairy', 'url': 'https://pokeapi.co/api/v2/pokemon/35/', 'weight': 75}, {'name': 'clefable', 'url': 'https://pokeapi.co/api/v2/pokemon/36/', 'weight': 400}, {'name': 'vulpix', 'url': 'https://pokeapi.co/api/v2/pokemon/37/', 'weight': 99}, {'name': 'ninetales', 'url': 'https://pokeapi.co/api/v2/pokemon/38/', 'weight': 199}, {'name': 'jigglypuff', 'url': 'https://pokeapi.co/api/v2/pokemon/39/', 'weight': 55}, {'name': 'wigglytuff', 'url': 'https://pokeapi.co/api/v2/pokemon/40/', 'weight': 120}, {'name': 'zubat', 'url': 'https://pokeapi.co/api/v2/pokemon/41/', 'weight': 75}, {'name': 'golbat', 'url': 'https://pokeapi.co/api/v2/pokemon/42/', 'weight': 550}, {'name': 'oddish', 'url': 'https://pokeapi.co/api/v2/pokemon/43/', 'weight': 54}, {'name': 'gloom', 'url': 'https://pokeapi.co/api/v2/pokemon/44/', 'weight': 86}, {'name': 'vileplume', 'url': 'https://pokeapi.co/api/v2/pokemon/45/', 'weight': 186}, {'name': 'paras', 'url': 'https://pokeapi.co/api/v2/pokemon/46/', 'weight': 54}, {'name': 'parasect', 'url': 'https://pokeapi.co/api/v2/pokemon/47/', 'weight': 295}, {'name': 'venonat', 'url': 'https://pokeapi.co/api/v2/pokemon/48/', 'weight': 300}, {'name': 'venomoth', 'url': 'https://pokeapi.co/api/v2/pokemon/49/', 'weight': 125}, {'name': 'diglett', 'url': 'https://pokeapi.co/api/v2/pokemon/50/', 'weight': 8}, {'name': 'dugtrio', 'url': 'https://pokeapi.co/api/v2/pokemon/51/', 'weight': 333}, {'name': 'meowth', 'url': 'https://pokeapi.co/api/v2/pokemon/52/', 'weight': 42}, {'name': 'persian', 'url': 'https://pokeapi.co/api/v2/pokemon/53/', 'weight': 320}, {'name': 'psyduck', 'url': 'https://pokeapi.co/api/v2/pokemon/54/', 'weight': 196}, {'name': 'golduck', 'url': 'https://pokeapi.co/api/v2/pokemon/55/', 'weight': 766}, {'name': 'mankey', 'url': 'https://pokeapi.co/api/v2/pokemon/56/', 'weight': 280}, {'name': 'primeape', 'url': 'https://pokeapi.co/api/v2/pokemon/57/', 'weight': 320}, {'name': 'growlithe', 'url': 'https://pokeapi.co/api/v2/pokemon/58/', 'weight': 190}, {'name': 'arcanine', 'url': 'https://pokeapi.co/api/v2/pokemon/59/', 'weight': 1550}, {'name': 'poliwag', 'url': 'https://pokeapi.co/api/v2/pokemon/60/', 'weight': 124}, {'name': 'poliwhirl', 'url': 'https://pokeapi.co/api/v2/pokemon/61/', 'weight': 200}, {'name': 'poliwrath', 'url': 'https://pokeapi.co/api/v2/pokemon/62/', 'weight': 540}, {'name': 'abra', 'url': 'https://pokeapi.co/api/v2/pokemon/63/', 'weight': 195}, {'name': 'kadabra', 'url': 'https://pokeapi.co/api/v2/pokemon/64/', 'weight': 565}, {'name': 'alakazam', 'url': 'https://pokeapi.co/api/v2/pokemon/65/', 'weight': 480}, {'name': 'machop', 'url': 'https://pokeapi.co/api/v2/pokemon/66/', 'weight': 195}, {'name': 'machoke', 'url': 'https://pokeapi.co/api/v2/pokemon/67/', 'weight': 705}, {'name': 'machamp', 'url': 'https://pokeapi.co/api/v2/pokemon/68/', 'weight': 1300}, {'name': 'bellsprout', 'url': 'https://pokeapi.co/api/v2/pokemon/69/', 'weight': 40}, {'name': 'weepinbell', 'url': 'https://pokeapi.co/api/v2/pokemon/70/', 'weight': 64}, {'name': 'victreebel', 'url': 'https://pokeapi.co/api/v2/pokemon/71/', 'weight': 155}, {'name': 'tentacool', 'url': 'https://pokeapi.co/api/v2/pokemon/72/', 'weight': 455}, {'name': 'tentacruel', 'url': 'https://pokeapi.co/api/v2/pokemon/73/', 'weight': 550}, {'name': 'geodude', 'url': 'https://pokeapi.co/api/v2/pokemon/74/', 'weight': 200}, {'name': 'graveler', 'url': 'https://pokeapi.co/api/v2/pokemon/75/', 'weight': 1050}, {'name': 'golem', 'url': 'https://pokeapi.co/api/v2/pokemon/76/', 'weight': 3000}, {'name': 'ponyta', 'url': 'https://pokeapi.co/api/v2/pokemon/77/', 'weight': 300}, {'name': 'rapidash', 'url': 'https://pokeapi.co/api/v2/pokemon/78/', 'weight': 950}, {'name': 'slowpoke', 'url': 'https://pokeapi.co/api/v2/pokemon/79/', 'weight': 360}, {'name': 'slowbro', 'url': 'https://pokeapi.co/api/v2/pokemon/80/', 'weight': 785}, {'name': 'poliwhirl', 'url': 'https://pokeapi.co/api/v2/pokemon/61/', 'weight': 200}, {'name': 'poliwrath', 'url': 'https://pokeapi.co/api/v2/pokemon/62/', 'weight': 540}, {'name': 'abra', 'url': 'https://pokeapi.co/api/v2/pokemon/63/', 'weight': 195}, {'name': 'kadabra', 'url': 'https://pokeapi.co/api/v2/pokemon/64/', 'weight': 565}, {'name': 'alakazam', 'url': 'https://pokeapi.co/api/v2/pokemon/65/', 'weight': 480}, {'name': 'machop', 'url': 'https://pokeapi.co/api/v2/pokemon/66/', 'weight': 195}, {'name': 'machoke', 'url': 'https://pokeapi.co/api/v2/pokemon/67/', 'weight': 705}, {'name': 'machamp', 'url': 'https://pokeapi.co/api/v2/pokemon/68/', 'weight': 1300}, {'name': 'bellsprout', 'url': 'https://pokeapi.co/api/v2/pokemon/69/', 'weight': 40}, {'name': 'weepinbell', 'url': 'https://pokeapi.co/api/v2/pokemon/70/', 'weight': 64}, {'name': 'victreebel', 'url': 'https://pokeapi.co/api/v2/pokemon/71/', 'weight': 155}, {'name': 'tentacool', 'url': 'https://pokeapi.co/api/v2/pokemon/72/', 'weight': 455}, {'name': 'tentacruel', 'url': 'https://pokeapi.co/api/v2/pokemon/73/', 'weight': 550}, {'name': 'geodude', 'url': 'https://pokeapi.co/api/v2/pokemon/74/', 'weight': 200}, {'name': 'graveler', 'url': 'https://pokeapi.co/api/v2/pokemon/75/', 'weight': 1050}, {'name': 'golem', 'url': 'https://pokeapi.co/api/v2/pokemon/76/', 'weight': 3000}, {'name': 'ponyta', 'url': 'https://pokeapi.co/api/v2/pokemon/77/', 'weight': 300}, {'name': 'rapidash', 'url': 'https://pokeapi.co/api/v2/pokemon/78/', 'weight': 950}, {'name': 'slowpoke', 'url': 'https://pokeapi.co/api/v2/pokemon/79/', 'weight': 360}, {'name': 'slowbro', 'url': 'https://pokeapi.co/api/v2/pokemon/80/', 'weight': 785}, {'name': 'magnemite', 'url': 'https://pokeapi.co/api/v2/pokemon/81/', 'weight': 60}, {'name': 'magneton', 'url': 'https://pokeapi.co/api/v2/pokemon/82/', 'weight': 600}, {'name': 'farfetchd', 'url': 'https://pokeapi.co/api/v2/pokemon/83/', 'weight': 150}, {'name': 'doduo', 'url': 'https://pokeapi.co/api/v2/pokemon/84/', 'weight': 392}, {'name': 'dodrio', 'url': 'https://pokeapi.co/api/v2/pokemon/85/', 'weight': 852}, {'name': 'seel', 'url': 'https://pokeapi.co/api/v2/pokemon/86/', 'weight': 900}, {'name': 'dewgong', 'url': 'https://pokeapi.co/api/v2/pokemon/87/', 'weight': 1200}, {'name': 'grimer', 'url': 'https://pokeapi.co/api/v2/pokemon/88/', 'weight': 300}, {'name': 'muk', 'url': 'https://pokeapi.co/api/v2/pokemon/89/', 'weight': 300}, {'name': 'shellder', 'url': 'https://pokeapi.co/api/v2/pokemon/90/', 'weight': 40}, {'name': 'cloyster', 'url': 'https://pokeapi.co/api/v2/pokemon/91/', 'weight': 1325}, {'name': 'gastly', 'url': 'https://pokeapi.co/api/v2/pokemon/92/', 'weight': 1}, {'name': 'haunter', 'url': 'https://pokeapi.co/api/v2/pokemon/93/', 'weight': 1}, {'name': 'gengar', 'url': 'https://pokeapi.co/api/v2/pokemon/94/', 'weight': 405}, {'name': 'onix', 'url': 'https://pokeapi.co/api/v2/pokemon/95/', 'weight': 2100}, {'name': 'drowzee', 'url': 'https://pokeapi.co/api/v2/pokemon/96/', 'weight': 324}, {'name': 'hypno', 'url': 'https://pokeapi.co/api/v2/pokemon/97/', 'weight': 756}, {'name': 'krabby', 'url': 'https://pokeapi.co/api/v2/pokemon/98/', 'weight': 65}, {'name': 'kingler', 'url': 'https://pokeapi.co/api/v2/pokemon/99/', 'weight': 600}, {'name': 'voltorb', 'url': 'https://pokeapi.co/api/v2/pokemon/100/', 'weight': 104}, {'name': 'electrode', 'url': 'https://pokeapi.co/api/v2/pokemon/101/', 'weight': 666}, {'name': 'exeggcute', 'url': 'https://pokeapi.co/api/v2/pokemon/102/', 'weight': 25}, {'name': 'exeggutor', 'url': 'https://pokeapi.co/api/v2/pokemon/103/', 'weight': 1200}, {'name': 'cubone', 'url': 'https://pokeapi.co/api/v2/pokemon/104/', 'weight': 65}, {'name': 'marowak', 'url': 'https://pokeapi.co/api/v2/pokemon/105/', 'weight': 450}, {'name': 'hitmonlee', 'url': 'https://pokeapi.co/api/v2/pokemon/106/', 'weight': 498}, {'name': 'hitmonchan', 'url': 'https://pokeapi.co/api/v2/pokemon/107/', 'weight': 502}, {'name': 'lickitung', 'url': 'https://pokeapi.co/api/v2/pokemon/108/', 'weight': 655}, {'name': 'koffing', 'url': 'https://pokeapi.co/api/v2/pokemon/109/', 'weight': 10}, {'name': 'weezing', 'url': 'https://pokeapi.co/api/v2/pokemon/110/', 'weight': 95}, {'name': 'rhyhorn', 'url': 'https://pokeapi.co/api/v2/pokemon/111/', 'weight': 1150}, {'name': 'rhydon', 'url': 'https://pokeapi.co/api/v2/pokemon/112/', 'weight': 1200}, {'name': 'chansey', 'url': 'https://pokeapi.co/api/v2/pokemon/113/', 'weight': 346}, {'name': 'tangela', 'url': 'https://pokeapi.co/api/v2/pokemon/114/', 'weight': 350}, {'name': 'kangaskhan', 'url': 'https://pokeapi.co/api/v2/pokemon/115/', 'weight': 800}, {'name': 'horsea', 'url': 'https://pokeapi.co/api/v2/pokemon/116/', 'weight': 80}, {'name': 'seadra', 'url': 'https://pokeapi.co/api/v2/pokemon/117/', 'weight': 250}, {'name': 'goldeen', 'url': 'https://pokeapi.co/api/v2/pokemon/118/', 'weight': 150}, {'name': 'seaking', 'url': 'https://pokeapi.co/api/v2/pokemon/119/', 'weight': 390}, {'name': 'staryu', 'url': 'https://pokeapi.co/api/v2/pokemon/120/', 'weight': 345}, {'name': 'magnemite', 'url': 'https://pokeapi.co/api/v2/pokemon/81/', 'weight': 60}, {'name': 'magneton', 'url': 'https://pokeapi.co/api/v2/pokemon/82/', 'weight': 600}, {'name': 'farfetchd', 'url': 'https://pokeapi.co/api/v2/pokemon/83/', 'weight': 150}, {'name': 'doduo', 'url': 'https://pokeapi.co/api/v2/pokemon/84/', 'weight': 392}, {'name': 'dodrio', 'url': 'https://pokeapi.co/api/v2/pokemon/85/', 'weight': 852}, {'name': 'seel', 'url': 'https://pokeapi.co/api/v2/pokemon/86/', 'weight': 900}, {'name': 'dewgong', 'url': 'https://pokeapi.co/api/v2/pokemon/87/', 'weight': 1200}, {'name': 'grimer', 'url': 'https://pokeapi.co/api/v2/pokemon/88/', 'weight': 300}, {'name': 'muk', 'url': 'https://pokeapi.co/api/v2/pokemon/89/', 'weight': 300}, {'name': 'shellder', 'url': 'https://pokeapi.co/api/v2/pokemon/90/', 'weight': 40}, {'name': 'cloyster', 'url': 'https://pokeapi.co/api/v2/pokemon/91/', 'weight': 1325}, {'name': 'gastly', 'url': 'https://pokeapi.co/api/v2/pokemon/92/', 'weight': 1}, {'name': 'haunter', 'url': 'https://pokeapi.co/api/v2/pokemon/93/', 'weight': 1}, {'name': 'gengar', 'url': 'https://pokeapi.co/api/v2/pokemon/94/', 'weight': 405}, {'name': 'onix', 'url': 'https://pokeapi.co/api/v2/pokemon/95/', 'weight': 2100}, {'name': 'drowzee', 'url': 'https://pokeapi.co/api/v2/pokemon/96/', 'weight': 324}, {'name': 'hypno', 'url': 'https://pokeapi.co/api/v2/pokemon/97/', 'weight': 756}, {'name': 'krabby', 'url': 'https://pokeapi.co/api/v2/pokemon/98/', 'weight': 65}, {'name': 'kingler', 'url': 'https://pokeapi.co/api/v2/pokemon/99/', 'weight': 600}, {'name': 'voltorb', 'url': 'https://pokeapi.co/api/v2/pokemon/100/', 'weight': 104}, {'name': 'electrode', 'url': 'https://pokeapi.co/api/v2/pokemon/101/', 'weight': 666}, {'name': 'exeggcute', 'url': 'https://pokeapi.co/api/v2/pokemon/102/', 'weight': 25}, {'name': 'exeggutor', 'url': 'https://pokeapi.co/api/v2/pokemon/103/', 'weight': 1200}, {'name': 'cubone', 'url': 'https://pokeapi.co/api/v2/pokemon/104/', 'weight': 65}, {'name': 'marowak', 'url': 'https://pokeapi.co/api/v2/pokemon/105/', 'weight': 450}, {'name': 'hitmonlee', 'url': 'https://pokeapi.co/api/v2/pokemon/106/', 'weight': 498}, {'name': 'hitmonchan', 'url': 'https://pokeapi.co/api/v2/pokemon/107/', 'weight': 502}, {'name': 'lickitung', 'url': 'https://pokeapi.co/api/v2/pokemon/108/', 'weight': 655}, {'name': 'koffing', 'url': 'https://pokeapi.co/api/v2/pokemon/109/', 'weight': 10}, {'name': 'weezing', 'url': 'https://pokeapi.co/api/v2/pokemon/110/', 'weight': 95}, {'name': 'rhyhorn', 'url': 'https://pokeapi.co/api/v2/pokemon/111/', 'weight': 1150}, {'name': 'rhydon', 'url': 'https://pokeapi.co/api/v2/pokemon/112/', 'weight': 1200}, {'name': 'chansey', 'url': 'https://pokeapi.co/api/v2/pokemon/113/', 'weight': 346}, {'name': 'tangela', 'url': 'https://pokeapi.co/api/v2/pokemon/114/', 'weight': 350}, {'name': 'kangaskhan', 'url': 'https://pokeapi.co/api/v2/pokemon/115/', 'weight': 800}, {'name': 'horsea', 'url': 'https://pokeapi.co/api/v2/pokemon/116/', 'weight': 80}, {'name': 'seadra', 'url': 'https://pokeapi.co/api/v2/pokemon/117/', 'weight': 250}, {'name': 'goldeen', 'url': 'https://pokeapi.co/api/v2/pokemon/118/', 'weight': 150}, {'name': 'seaking', 'url': 'https://pokeapi.co/api/v2/pokemon/119/', 'weight': 390}, {'name': 'staryu', 'url': 'https://pokeapi.co/api/v2/pokemon/120/', 'weight': 345}, {'name': 'starmie', 'url': 'https://pokeapi.co/api/v2/pokemon/121/', 'weight': 800}, {'name': 'mr-mime', 'url': 'https://pokeapi.co/api/v2/pokemon/122/', 'weight': 545}, {'name': 'scyther', 'url': 'https://pokeapi.co/api/v2/pokemon/123/', 'weight': 560}, {'name': 'jynx', 'url': 'https://pokeapi.co/api/v2/pokemon/124/', 'weight': 406}, {'name': 'electabuzz', 'url': 'https://pokeapi.co/api/v2/pokemon/125/', 'weight': 300}, {'name': 'magmar', 'url': 'https://pokeapi.co/api/v2/pokemon/126/', 'weight': 445}, {'name': 'pinsir', 'url': 'https://pokeapi.co/api/v2/pokemon/127/', 'weight': 550}, {'name': 'tauros', 'url': 'https://pokeapi.co/api/v2/pokemon/128/', 'weight': 884}, {'name': 'magikarp', 'url': 'https://pokeapi.co/api/v2/pokemon/129/', 'weight': 100}, {'name': 'gyarados', 'url': 'https://pokeapi.co/api/v2/pokemon/130/', 'weight': 2350}, {'name': 'lapras', 'url': 'https://pokeapi.co/api/v2/pokemon/131/', 'weight': 2200}, {'name': 'ditto', 'url': 'https://pokeapi.co/api/v2/pokemon/132/', 'weight': 40}, {'name': 'eevee', 'url': 'https://pokeapi.co/api/v2/pokemon/133/', 'weight': 65}, {'name': 'vaporeon', 'url': 'https://pokeapi.co/api/v2/pokemon/134/', 'weight': 290}, {'name': 'jolteon', 'url': 'https://pokeapi.co/api/v2/pokemon/135/', 'weight': 245}, {'name': 'flareon', 'url': 'https://pokeapi.co/api/v2/pokemon/136/', 'weight': 250}, {'name': 'porygon', 'url': 'https://pokeapi.co/api/v2/pokemon/137/', 'weight': 365}, {'name': 'omanyte', 'url': 'https://pokeapi.co/api/v2/pokemon/138/', 'weight': 75}, {'name': 'omastar', 'url': 'https://pokeapi.co/api/v2/pokemon/139/', 'weight': 350}, {'name': 'kabuto', 'url': 'https://pokeapi.co/api/v2/pokemon/140/', 'weight': 115}, {'name': 'kabutops', 'url': 'https://pokeapi.co/api/v2/pokemon/141/', 'weight': 405}, {'name': 'aerodactyl', 'url': 'https://pokeapi.co/api/v2/pokemon/142/', 'weight': 590}, {'name': 'snorlax', 'url': 'https://pokeapi.co/api/v2/pokemon/143/', 'weight': 4600}, {'name': 'articuno', 'url': 'https://pokeapi.co/api/v2/pokemon/144/', 'weight': 554}, {'name': 'zapdos', 'url': 'https://pokeapi.co/api/v2/pokemon/145/', 'weight': 526}, {'name': 'moltres', 'url': 'https://pokeapi.co/api/v2/pokemon/146/', 'weight': 600}, {'name': 'dratini', 'url': 'https://pokeapi.co/api/v2/pokemon/147/', 'weight': 33}, {'name': 'dragonair', 'url': 'https://pokeapi.co/api/v2/pokemon/148/', 'weight': 165}, {'name': 'dragonite', 'url': 'https://pokeapi.co/api/v2/pokemon/149/', 'weight': 2100}, {'name': 'mewtwo', 'url': 'https://pokeapi.co/api/v2/pokemon/150/', 'weight': 1220}, {'name': 'mew', 'url': 'https://pokeapi.co/api/v2/pokemon/151/', 'weight': 40}, {'name': 'chikorita', 'url': 'https://pokeapi.co/api/v2/pokemon/152/', 'weight': 64}, {'name': 'bayleef', 'url': 'https://pokeapi.co/api/v2/pokemon/153/', 'weight': 158}, {'name': 'meganium', 'url': 'https://pokeapi.co/api/v2/pokemon/154/', 'weight': 1005}, {'name': 'cyndaquil', 'url': 'https://pokeapi.co/api/v2/pokemon/155/', 'weight': 79}, {'name': 'quilava', 'url': 'https://pokeapi.co/api/v2/pokemon/156/', 'weight': 190}, {'name': 'typhlosion', 'url': 'https://pokeapi.co/api/v2/pokemon/157/', 'weight': 795}, {'name': 'totodile', 'url': 'https://pokeapi.co/api/v2/pokemon/158/', 'weight': 95}, {'name': 'croconaw', 'url': 'https://pokeapi.co/api/v2/pokemon/159/', 'weight': 250}, {'name': 'feraligatr', 'url': 'https://pokeapi.co/api/v2/pokemon/160/', 'weight': 888}]
+[2024-06-23T01:19:39.127+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-23T01:19:39.161+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=pokemon_example, task_id=getpokemonweights, run_id=manual__2024-06-23T01:18:25.665789+00:00, execution_date=20240623T011825, start_date=20240623T011840, end_date=20240623T011939
+[2024-06-23T01:19:39.212+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-23T01:19:39.255+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-23T01:19:39.260+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
