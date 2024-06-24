@@ -1,6 +1,6 @@
 # Deidentification via Clustering using Airflow Taskflow API
-This is an example of deidentifying data using a k-means clustering algorithm using the taskflow API in Airflow.
-In this case, the data we will be deidentifying is the "weight" of the first 200-something pokemon. By using clustering, we will be able to tell what group each pokemon belongs to, without actually being able to see their weight. This allows for communicating information about their weights without diclosing what their weight actually was. 
+This is an example of deidentifying data using a k-means clustering algorithm using the Taskflow API in Airflow.
+In this case, the data we will be deidentifying is the "weight" of the first 200-something pokemon. By using clustering, we will be able to communicate information about their weights without diclosing what their weight actually was. 
 We will alternatively further deidentify the data by giving just the centroids of the groups and their sizes in order to avoid disclosing the names of the pokemon.
 
 Using Airflow to break out the tasks in the Python stages allows for not having to pull the data from the API multiple times and enables faster debugging.
